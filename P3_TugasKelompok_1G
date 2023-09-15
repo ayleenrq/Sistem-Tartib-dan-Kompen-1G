@@ -4,7 +4,7 @@ public class jamkompen {
 public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int jamAlfa;
-        float jamKompensasi;
+        int jamKompensasi;
         System.out.println("Masukkan jam alfa: ");
         jamAlfa = sc.nextInt();
         jamKompensasi = jamAlfa * 2;
