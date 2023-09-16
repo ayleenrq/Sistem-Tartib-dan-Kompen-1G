@@ -8,3 +8,23 @@ public class TatibKompen {
         int menuChoice;
 
         do {
+                // Menampilkan menu pilihan
+            System.out.println("Menu:");
+            System.out.println("1. Hitung jam kompensasi");
+            System.out.println("2. Kategori Tata Tertib dan Kompensasi");
+            System.out.println("3. Keluar");
+            System.out.print("Pilih menu (1/2/3): ");
+            
+            menuChoice = sc.nextInt();
+            
+            switch (menuChoice) {
+                case 1:
+                    // Masukkan jam alfa dan hitung jam kompensasi
+                    System.out.println("Masukkan jam alfa: ");
+                    jamAlfa = sc.nextInt();
+                    jamKompensasi = jamAlfa * 2;
+                    System.out.println("Jam kompensasi anda: " + jamKompensasi);
+                    break;
+                case 2:
+                    // Menampilkan aturan tata tertib dan kompensasi
+                    System.out.println("Aturan Tata Tertib dan Kompensasi:");
