@@ -6,7 +6,7 @@ public class TatibKompen {
         int jamAlfa, jamKompensasi, menuChoice;
 
         do {
-            // Menampilkan menu pilihan
+                // Menampilkan menu pilihan
             System.out.println("Menu:");
             System.out.println("1. Hitung jam kompensasi");
             System.out.println("2. Kategori Tata Tertib dan Kompensasi");
