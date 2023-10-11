@@ -18,15 +18,15 @@ public class Login {
         System.out.println("3. Dosen");
         login = sc08.nextLine();
 
-        System.out.println("Masukkan Username: ");
+        System.out.print("Masukkan Username: ");
         user = sc08.nextLine();
         
-        System.out.println("Masukkan Password: ");
+        System.out.print("Masukkan Password: ");
         password = sc08.nextLine();
 
         if(login.equals("Admin")) {
             if (user.equals(userSystem1)) {
-                if (password.equals(passwordSystem1)) {
+                if (password.equalsIgnoreCase(passwordSystem1)) {
                     System.out.println("Berhasil Login1");
                 }
                 else {
@@ -37,7 +37,7 @@ public class Login {
                 System.out.println("Username Salah!");
             }
         }
-        else if (login.equals("Mahasiswa")) {
+        else if (login.equalsIgnoreCase("Mahasiswa")) {
             if (user.equals(userSystem2)) {
                 if (password.equals(passwordSystem2)) {
                     System.out.println("Berhasil Login!");
@@ -47,10 +47,10 @@ public class Login {
                 }
             }
             else {
-                System.out.println("Password Salah!");
+                System.out.println("Username Salah!");
             }
         }
-        else {
+        else if (login.equalsIgnoreCase("Dosen")) {
             if (user.equals(userSystem3)) {
                 if (password.equals(passwordSystem3)) {
                     System.out.println("Berhasil Login!");
@@ -60,8 +60,10 @@ public class Login {
                 }
             }
             else {
-                System.out.println("Password Salah!");
+                System.out.println("Username Salah!");
             }
         }
+        else
+            System.out.println("Peran yang anda pilih tidak valid");
     }
 }
