@@ -4,7 +4,7 @@ public class Login {
     public static void main(String[] args) {
         Scanner sc08 = new Scanner(System.in);
 
-        String login, admin, mahasiswa, dosen, user, password, userSystem1, passwordSystem1, userSystem2, passwordSystem2, userSystem3, passwordSystem3;
+        String login, user, password, userSystem1, passwordSystem1, userSystem2, passwordSystem2, userSystem3, passwordSystem3;
         userSystem1 = "admin";
         passwordSystem1 = "1234";
         userSystem2 = "Ayleen Ruhul Qisthy";
