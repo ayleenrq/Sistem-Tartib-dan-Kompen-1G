@@ -14,13 +14,13 @@ public class PembayaranKompensasi {
 
         switch (pilihan) {
             case 1:
-                System.out.println("Pilih dosen yang akan Anda bantu:");
+                System.out.println("Anda telah memilih membantu dosen");
                 break;
             case 2:
-                System.out.println("Pilih ruangan yang akan Anda bersihkan:");
+                System.out.println("Anda telah memilih membersihkan ruangan");
                 break;
             case 3:
-                System.out.println("Pilih kegiatan yang akan Anda bantu dalam panitia:");
+                System.out.println("Anda telah memilih membantu panitia");
                 break;
             default:
                 System.out.println("Pilihan yang Anda masukkan tidak valid.");
