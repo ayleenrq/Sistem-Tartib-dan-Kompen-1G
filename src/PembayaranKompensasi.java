@@ -14,19 +14,13 @@ public class PembayaranKompensasi {
 
         switch (pilihan) {
             case 1:
-                // Mahasiswa memilih untuk membayar kompensasi dengan "Membantu Dosen"
                 System.out.println("Pilih dosen yang akan Anda bantu:");
-                // Implementasi pemilihan dosen
                 break;
             case 2:
-                // Mahasiswa memilih untuk membayar kompensasi dengan "Membersihkan Ruangan"
                 System.out.println("Pilih ruangan yang akan Anda bersihkan:");
-                // Implementasi pemilihan ruangan
                 break;
             case 3:
-                // Mahasiswa memilih untuk membayar kompensasi dengan "Membantu Panitia"
                 System.out.println("Pilih kegiatan yang akan Anda bantu dalam panitia:");
-                // Implementasi pemilihan kegiatan
                 break;
             default:
                 System.out.println("Pilihan yang Anda masukkan tidak valid.");
