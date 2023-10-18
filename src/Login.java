@@ -56,6 +56,7 @@ public class Login {
                 break; 
             }
         } while (true); 
+            System.out.println("Login Berhasil!");
 
         sc.close();
     }
