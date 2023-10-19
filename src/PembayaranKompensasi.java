@@ -24,7 +24,9 @@ public class PembayaranKompensasi {
                 break;
             default:
                 System.out.println("Pilihan yang Anda masukkan tidak valid.");
+            
         }
+        System.out.println("Terima kasih telah berpartisipasi!");
 
         scanner.close();
     }
