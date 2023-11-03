@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class cetakResi {
     public static void main(String[] args) {
         Scanner sc08 = new Scanner(System.in);
@@ -109,6 +108,8 @@ public class cetakResi {
 
 
     }
+
+
 
 
 
