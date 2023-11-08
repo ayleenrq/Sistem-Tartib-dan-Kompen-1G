@@ -1,16 +1,15 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Login {
     public static void main(String[] args) {
         Scanner sc08 = new Scanner(System.in);
 
-        String login, user, password, userSystem1, passwordSystem1, userSystem2, passwordSystem2, userSystem3, passwordSystem3;
-        userSystem1 = "admin";
-        passwordSystem1 = "1234";
-        userSystem2 = "Ayleen Ruhul Qisthy";
-        passwordSystem2 = "1234";
-        userSystem3 = "Mamluatul Haniah";
-        passwordSystem3 = "1234";
+        String[] mahasiswa = {"ayleen", "marsya", "adham"};
+        String[] dosen = {"dosen1", "dosen2"};
+        String[] admin = {"admin1", "admin1"};
+        String password = "1234";
+        String login;
 
         System.out.println("Pilih Login sebagai: ");
         System.out.println("1. Admin");
@@ -19,14 +18,15 @@ public class Login {
         login = sc08.nextLine();
 
         System.out.print("Masukkan Username: ");
-        user = sc08.nextLine();
+        String inputuser = sc08.nextLine();
         
         System.out.print("Masukkan Password: ");
-        password = sc08.nextLine();
+        String inputpassword = sc08.nextLine();
 
-        if(login.equals("Admin")) {
-            if (user.equals(userSystem1)) {
-                if (password.equalsIgnoreCase(passwordSystem1)) {
+
+        if(login.equalsIgnoreCase("Admin")) {
+            if (Arrays.stream(admin).anyMatch(inputuser::equals)) {
+                if (inputpassword.equals(password)) {
                     System.out.println("Berhasil Login1");
                 }
                 else {
@@ -36,11 +36,10 @@ public class Login {
             else {
                 System.out.println("Username Salah!");
             }
-        }
-        else if (login.equalsIgnoreCase("Mahasiswa")) {
-            if (user.equals(userSystem2)) {
-                if (password.equals(passwordSystem2)) {
-                    System.out.println("Berhasil Login!");
+        } else if (Arrays.stream(mahasiswa).anyMatch(inputuser::equals)){
+            if (inputuser.equals(mahasiswa)) {
+                if (inputpassword.equals(password)) {
+                    System.out.println("Berhasil Login1");
                 }
                 else {
                     System.out.println("Password Salah!");
@@ -49,11 +48,10 @@ public class Login {
             else {
                 System.out.println("Username Salah!");
             }
-        }
-        else if (login.equalsIgnoreCase("Dosen")) {
-            if (user.equals(userSystem3)) {
-                if (password.equals(passwordSystem3)) {
-                    System.out.println("Berhasil Login!");
+        } else if (Arrays.stream(dosen).anyMatch(inputuser::equals)) {
+            if (inputuser.equals(dosen)) {
+                if (inputpassword.equals(password)) {
+                    System.out.println("Berhasil Login1");
                 }
                 else {
                     System.out.println("Password Salah!");
@@ -62,8 +60,7 @@ public class Login {
             else {
                 System.out.println("Username Salah!");
             }
-        }
-        else
+        } else
             System.out.println("Peran yang anda pilih tidak valid");
     }
 }
