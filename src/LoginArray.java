@@ -27,7 +27,7 @@ public class LoginArray {
         if(login.equalsIgnoreCase("Admin")) {
             if (Arrays.stream(admin).anyMatch(inputuser::equals)) {
                 if (inputpassword.equals(password)) {
-                    System.out.println("Berhasil Login1");
+                    System.out.println("Berhasil Login!");
                 }
                 else {
                     System.out.println("Password Salah!");
@@ -36,10 +36,10 @@ public class LoginArray {
             else {
                 System.out.println("Username Salah!");
             }
-        } else if (Arrays.stream(mahasiswa).anyMatch(inputuser::equals)){
-            if (inputuser.equals(mahasiswa)) {
+        } else if (login.equalsIgnoreCase("Mahasiswa")) {
+            if (Arrays.stream(mahasiswa).anyMatch(inputuser::equals)){
                 if (inputpassword.equals(password)) {
-                    System.out.println("Berhasil Login1");
+                    System.out.println("Berhasil Login!");
                 }
                 else {
                     System.out.println("Password Salah!");
@@ -48,10 +48,10 @@ public class LoginArray {
             else {
                 System.out.println("Username Salah!");
             }
-        } else if (Arrays.stream(dosen).anyMatch(inputuser::equals)) {
-            if (inputuser.equals(dosen)) {
+        } else if (login.equalsIgnoreCase("Dosen")) {
+            if (Arrays.stream(dosen).anyMatch(inputuser::equals)) {
                 if (inputpassword.equals(password)) {
-                    System.out.println("Berhasil Login1");
+                    System.out.println("Berhasil Login!");
                 }
                 else {
                     System.out.println("Password Salah!");
