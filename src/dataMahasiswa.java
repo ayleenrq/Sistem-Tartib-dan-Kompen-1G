@@ -29,8 +29,7 @@ public class dataMahasiswa {
         else 
         System.out.println("Peringatan Pelanggaran Berat Tingkat I");
 
-        System.out.println("Feedback Dosen :   ");
-
+        
 
     }
 }
