@@ -1,7 +1,6 @@
-
 import java.util.Scanner;
-public class cetakResi {
-public static void main(String[] args) {
+public class CetakResi {
+    public static void main(String[] args) {
         Scanner sc08 = new Scanner(System.in);
 
         char kembaliMenu;
@@ -40,8 +39,7 @@ public static void main(String[] args) {
 
         int jamKompensasi = jamAlfa * 2;
         
-        
-        
+
 
         System.out.print("Apakah Anda ingin mencetak resi? (y/t): ");
         char cetakResi = sc08.next().charAt(0);
@@ -51,10 +49,10 @@ public static void main(String[] args) {
             System.out.println("Banyaknya Jam Alfa: " + jamAlfa);
             System.out.println("Jam Kompensasi: " + jamKompensasi);
         }
-        if (jamKompensasi > 4){
-            System.out.println("Pembayaran Kompensasi: Membersihkan Taman");
-        } else {
-            System.out.println("Pembayaran Kompensasi: Membantu membersihkan ruangan dosen");
+        if (jamKompensasi > 6){
+            System.out.println("Pembayaran Kompensasi: Membersihkan Kamar mandi dosen");
+        } else{
+            System.out.println("Pembayaran Kompensasi: Membersihkan ruangan dosen");
         }
     }
 
@@ -79,7 +77,7 @@ public static void main(String[] args) {
             sanksi = "Denda";
         }
 
-        
+
 
         System.out.print("Apakah Anda ingin mencetak resi? (y/t): ");
         char cetakResi = scanner.next().charAt(0);
@@ -96,8 +94,6 @@ public static void main(String[] args) {
     }
 
 
+
     }
-
-
-
 
