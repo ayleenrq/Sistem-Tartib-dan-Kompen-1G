@@ -18,13 +18,18 @@ public class dataMahasiswa {
         
         if (poin <=0)
         System.out.println("Tidak ada pelanggaran ");
-        else if (poin >=30)
-        System.out.println("Peringatan Pelanggaran Berat! ");
-        else
-        System.out.println("Peringatan Pelanggaran Ringan ");
+        else if (poin <=30 && poin !=0)
+        System.out.println("Peringatan Pelanggaran Ringan Tingkat V ");
+        else if (poin > 30 && poin <=40)
+        System.out.println("Peringatan Pelanggaran Sedang Tingkat IV ");
+        else if (poin > 40 && poin <=60)
+        System.out.println("Peringatan Pelanggaran Cukup Berat Tingkat III");
+        else if (poin > 60 && poin <= 70)
+        System.out.println("Peringatan Pelanggaran Berat Tingkat II");
+        else 
+        System.out.println("Peringatan Pelanggaran Sangat Berat Tingkat I");
 
-        System.out.println("Feedback Dosen :   ");
-
+        
 
     }
 }
