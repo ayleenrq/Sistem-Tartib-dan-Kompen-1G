@@ -34,7 +34,7 @@ public class LoginArray {
         System.out.print("Masukkan Password: ");
         String inputpassword = sc08.nextLine();
 
-
+        
         if(login.equalsIgnoreCase("Admin")) {
             for (int i = 0; i < adminData.length; i++) {
                 if (inputuser.equals(adminData[i][0])) {
