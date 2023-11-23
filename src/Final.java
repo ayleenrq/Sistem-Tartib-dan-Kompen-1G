@@ -185,6 +185,26 @@ public class Final {
                         System.out.println("======================================================");
                         System.out.println("[                    Kompensasi                      ]");
                         System.out.println("======================================================");
+                        System.out.print("Masukkan jam alfa  : ");
+                        int jamAlfaK = sc08.nextInt();
+                        System.out.print("Masukkan poin pelanggaran   : ");
+                        int poinPelanggaran = sc08.nextInt();
+
+                        int jamKompensasiK = jamAlfaK * 2;
+
+                        System.out.println("Jam Kompensasi anda: " + jamKompensasiK);
+                        if (poinPelanggaran <= 0)
+                            System.out.println("Tidak ada pelanggaran ");
+                        else if (poinPelanggaran <= 30 && poin != 0)
+                            System.out.println("Peringatan Pelanggaran Ringan Tingkat V ");
+                        else if (poinPelanggaran > 30 && poin <= 40)
+                            System.out.println("Peringatan Pelanggaran Sedang Tingkat IV ");
+                        else if (poinPelanggaran > 40 && poin <= 60)
+                            System.out.println("Peringatan Pelanggaran Cukup Berat Tingkat III");
+                        else if (poinPelanggaran > 60 && poin <= 70)
+                            System.out.println("Peringatan Pelanggaran Berat Tingkat II");
+                        else
+                            System.out.println("Peringatan Pelanggaran Sangat Berat Tingkat I");
 
                         break;
 
@@ -196,6 +216,7 @@ public class Final {
                         System.out.println("1. Membantu Dosen");
                         System.out.println("2. Membersihkan Ruangan");
                         System.out.println("3. Membantu Panitia");
+                        System.out.print("Pilih Salah Satu (1/2/3): ");
 
                         int pilihan = sc08.nextInt();
 
@@ -269,23 +290,8 @@ public class Final {
                         int jamAlfa = sc08.nextInt();
 
                         int jamKompensasi = jamAlfa * 2;
+                        System.out.println("Jam Kompensasi yang didapat: " + jamKompensasi);
                         int pembayaranKompensasi = 0;
-
-                        System.out.println("Pilih kategori pembayaran:");
-                        System.out.println("1. 4 jam = Membersihkan kamar mandi");
-                        System.out.println("2. 6 jam = Membersihkan taman");
-                        int kategori = sc08.nextInt();
-
-                        switch (kategori) {
-                            case 1:
-                                pembayaranKompensasi = 4 * jamKompensasi;
-                                break;
-                            case 2:
-                                pembayaranKompensasi = 6 * jamKompensasi;
-                                break;
-                            default:
-                                System.out.println("Kategori tidak valid.");
-                        }
 
                         System.out.print("Apakah Anda ingin mencetak resi? (y/t): ");
                         char cetakResi = sc08.next().charAt(0);
@@ -294,8 +300,28 @@ public class Final {
                             System.out.println("Nama Mahasiswa: " + namaMahasiswa);
                             System.out.println("Banyaknya Jam Alfa: " + jamAlfa);
                             System.out.println("Jam Kompensasi: " + jamKompensasi);
-                            System.out.println("Pembayaran Kompensasi: " + pembayaranKompensasi);
                         }
+                        System.out.println("Pilih kategori pembayaran:");
+                        System.out.println("1. 2-4 jam = Membersihkan kamar mandi");
+                        System.out.println("2. 5-6 jam = Membersihkan taman");
+                        System.out.println("3. 7-10 jam = Menjadi Panitia sebuah event");
+                        System.out.print("Pilih Salah Satu (1/2/3): ");
+                        int kategori = sc08.nextInt();
+
+                        switch (kategori) {
+                            case 1:
+                                System.out.println("Membersihkan kamar mandi");
+                                break;
+                            case 2:
+                                System.out.println("Membersihkan taman");
+                                break;
+                            case 3:
+                                System.out.println("Menjadi Panitia Sebuah Event");
+                                break;
+                            default:
+                                System.out.println("Kategori tidak valid.");
+                        }
+
                         break;
 
                     case 8:
@@ -305,8 +331,8 @@ public class Final {
                         break;
 
                     case 9:
-                        System.out.println("Keluar dari sistem? (y/t)");
-                        String keluar = sc08.nextLine();
+                        System.out.print("Keluar dari sistem? (y/t): ");
+                        String keluar = sc08.next();
                         if (keluar.equalsIgnoreCase("y")) {
                             break;
                         } else {
