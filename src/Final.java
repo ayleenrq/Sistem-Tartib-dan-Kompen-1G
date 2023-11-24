@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Final {
     public static void main(String[] args) {
         Scanner sc08 = new Scanner(System.in);
+        boolean run=true;
 
         String[][] mahasiswaData = {
                 { "Adham", "7890" },
@@ -334,12 +335,13 @@ public class Final {
                         System.out.print("Keluar dari sistem? (y/t): ");
                         String keluar = sc08.next();
                         if (keluar.equalsIgnoreCase("y")) {
+                            run=false;
                             break;
                         } else {
 
                         }
                 }
-            } while (true);
+            } while (run);
         }
     }
 }
