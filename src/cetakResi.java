@@ -9,9 +9,9 @@ public class cetakResi {
             System.out.println("1. Cetak Resi Pembayaran Kompensasi");
             System.out.println("2. Cetak Resi Pelanggaran Tata Tertib");
             System.out.print("Pilih menu (1/2): ");
-            int menu = sc08.nextInt();
+            int resi = sc08.nextInt();
 
-            switch (menu) {
+            switch (resi) {
                 case 1:
                     cetakResiPembayaranKompensasi(sc08);
                     break;
