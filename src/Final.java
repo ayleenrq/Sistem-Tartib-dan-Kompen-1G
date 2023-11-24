@@ -329,6 +329,7 @@ public class Final {
                         System.out.println("======================================================");
                         System.out.println("[                   Manajemen Akun                    ]");
                         System.out.println("======================================================");
+                        System.out.println("      Apakah anda ingin mengedit info akun anda?      ");
                         break;
 
                     case 9:
