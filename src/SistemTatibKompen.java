@@ -26,7 +26,7 @@ public class SistemTatibKompen {
             {"Marsya Aurelia Sefira", "2341720011", "Teknologi Informasi", "D4 Teknik Informatika", "TI - 1G", "18"}
         };
 
-        boolean loginAdmin = false, loginMahasiswa = false, loginDosen = false, paswordSalah = false, exitBoolean = false;
+        boolean loginAdmin = false, loginMahasiswa = false, loginDosen = false, paswordSalah = false;
         String feedbackDosen, exit;
         int poin = 0;
 
@@ -86,6 +86,9 @@ public class SistemTatibKompen {
             System.out.println("Berhasil Login!");
             System.out.println();
 
+            boolean exitBoolean = false;
+            boolean keluar = false;
+
             do {
             System.out.println("============================================");
             System.out.println("[   Tata Tertib dan Kompensasi Mahasiswa   ]");
@@ -100,6 +103,7 @@ public class SistemTatibKompen {
             System.out.println("[ 7. Cetak Pelanggaran                     ]");
             System.out.println("[ 8. Manajemen Akun                        ]");
             System.out.println("[ 9. Keluar                                ]");
+            System.out.println("============================================");
             System.out.print("Pilih menu (1/2/3/?): ");
             int menu = sc08.nextInt();
 
@@ -109,7 +113,6 @@ public class SistemTatibKompen {
                     break;
                 case 2:
                     for (int i = 0; i < dataMahasiswa.length; i++) {
-                        if (inputuser.equals(mahasiswaData[i][0])) {
                             System.out.println();
                             System.out.println("============================================");
                             System.out.println("[              Data Mahasiswa              ]");
@@ -120,15 +123,14 @@ public class SistemTatibKompen {
                             System.out.println("[ Prodi          : " + dataMahasiswa[i][3]);
                             System.out.println("[ Kelas          : "  + dataMahasiswa[i][4]);
                             System.out.println("[ Nomor Absen    : "  + dataMahasiswa[i][5]); 
+                            System.out.println("============================================");
                             System.out.print("Exit (true) : ");
                             exitBoolean = sc08.nextBoolean();
-                            exit = exitBoolean ? "yes" : "no";
-                                if (exit.equalsIgnoreCase("yes")) {
-                                    exitBoolean = true;
-                                }
                             System.out.println();    
-                            break;
-                        } 
+                            if (exitBoolean) {
+                                break;
+                            }
+                            
                     }
                     break;
                 case 3:
@@ -137,14 +139,33 @@ public class SistemTatibKompen {
                 case 4:
 
                     break;
+                case 5:
+
+                    break;
+                case 6:
+
+                    break;
+                case 7:
+
+                    break;
+                case 8:
+
+                    break;
+                case 9:
+                    System.out.println("Terimakasih telah menggunakan program ini!");
+                    keluar = true;
+                    break;
                 default:
                     System.out.println("Pilihan Menu tidak tersedia, Silahkan coba lagi.");
                     break;
             }
 
-            } while (true || exitBoolean != false);
+            } while (!keluar);
 
-        } else if (paswordSalah) {
+        } else if (loginDosen) {
+            
+        }
+        else if (paswordSalah) {
             System.out.println("Password Salah");
         } else {
             System.out.println("Username Salah!");

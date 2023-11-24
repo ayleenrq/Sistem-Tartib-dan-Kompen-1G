@@ -38,25 +38,8 @@ public class cetakResi {
         int jamAlfa = sc08.nextInt();
 
         int jamKompensasi = jamAlfa * 2;
-        int pembayaranKompensasi = 0;
-
-        System.out.println("Pilih kategori pembayaran:");
-        System.out.println("1. 4 jam = Membersihkan kamar mandi");
-        System.out.println("2. 6 jam = Membersihkan taman");
-        int kategori = sc08.nextInt();
-
-        switch (kategori) {
-            case 1:
-                pembayaranKompensasi = 4 * jamKompensasi;
-                break;
-            case 2:
-                pembayaranKompensasi = 6 * jamKompensasi;
-                break;
-            default:
-                System.out.println("Kategori tidak valid.");
-        }
-
         
+
 
         System.out.print("Apakah Anda ingin mencetak resi? (y/t): ");
         char cetakResi = sc08.next().charAt(0);
@@ -65,7 +48,11 @@ public class cetakResi {
             System.out.println("Nama Mahasiswa: " + namaMahasiswa);
             System.out.println("Banyaknya Jam Alfa: " + jamAlfa);
             System.out.println("Jam Kompensasi: " + jamKompensasi);
-            System.out.println("Pembayaran Kompensasi: " + pembayaranKompensasi);
+        }
+        if (jamKompensasi > 6){
+            System.out.println("Pembayaran Kompensasi: Membersihkan Kamar mandi dosen");
+        } else{
+            System.out.println("Pembayaran Kompensasi: Membersihkan ruangan dosen");
         }
     }
 
@@ -90,7 +77,7 @@ public class cetakResi {
             sanksi = "Denda";
         }
 
-        
+
 
         System.out.print("Apakah Anda ingin mencetak resi? (y/t): ");
         char cetakResi = scanner.next().charAt(0);
@@ -107,9 +94,6 @@ public class cetakResi {
     }
 
 
+
     }
-
-
-
-
 
