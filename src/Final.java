@@ -23,16 +23,15 @@ public class Final {
 
         String[][] dataMahasiswa = {
                 { "Adham Baskara", "2341720199", "Teknologi Informasi", "D4 Teknik Informatika", "TI - 1G", "02" },
-                { "Ayleen Ruhul Qisthy", "2341720012", "Teknologi Informasi", "D4 Teknik Informatika", "TI - 1G",
-                        "07" },
-                { "Marsya Aurelia Sefira", "2341720011", "Teknologi Informasi", "D4 Teknik Informatika", "TI - 1G",
-                        "18" }
+                { "Ayleen Ruhul Qisthy", "2341720012", "Teknologi Informasi", "D4 Teknik Informatika", "TI - 1G", "07" },
+                { "Marsya Aurelia Sefira", "2341720011", "Teknologi Informasi", "D4 Teknik Informatika", "TI - 1G", "18" }
         };
 
         boolean loginAdmin = false, loginMahasiswa = false, loginDosen = false, paswordSalah = false,
                 exitBoolean = false;
-        String feedbackDosen, exit;
-        int poin = 0;
+        String feedbackDosen, exit, kompen;
+        int poin = 0, jamAlfaK = 0, jamKompensasiK = 0, jatahKompen, jatahKompenSelesai;
+
 
         System.out.println("============================================");
         System.out.println("[                  LOGIN                   ]");
@@ -157,7 +156,12 @@ public class Final {
                         System.out.println("14. Tidak menjaga ketertiban dan keamanan di seluruh area Polinema\r\n" + //
                                 "(misalnya: parkir tidak pada tempatnya, konvoi selebrasi wisuda\r\n" + //
                                 "dll) : Tingkat II");
-
+                        System.out.print("Exit (true) : ");
+                            exitBoolean = sc08.nextBoolean();
+                            System.out.println();    
+                            if (exitBoolean) {
+                                break;
+                            }
                         break;
                     case 2:
                         for (int i = 0; i < dataMahasiswa.length; i++) {
@@ -174,12 +178,10 @@ public class Final {
                                 System.out.println("[ Nomor Absen    : " + dataMahasiswa[i][5]);
                                 System.out.print("Exit (true) : ");
                                 exitBoolean = sc08.nextBoolean();
-                                exit = exitBoolean ? "yes" : "no";
-                                if (exit.equalsIgnoreCase("yes")) {
-                                    exitBoolean = true;
+                                System.out.println();    
+                                if (exitBoolean) {
+                                    break;
                                 }
-                                System.out.println();
-                                break;
                             }
                         }
                         break;
@@ -188,11 +190,11 @@ public class Final {
                         System.out.println("[                    Kompensasi                      ]");
                         System.out.println("======================================================");
                         System.out.print("Masukkan jam alfa  : ");
-                        int jamAlfaK = sc08.nextInt();
+                        jamAlfaK = sc08.nextInt();
                         System.out.print("Masukkan poin pelanggaran   : ");
                         int poinPelanggaran = sc08.nextInt();
 
-                        int jamKompensasiK = jamAlfaK * 2;
+                        jamKompensasiK = jamAlfaK * 2;
 
                         System.out.println("Jam Kompensasi anda: " + jamKompensasiK);
                         if (poinPelanggaran <= 0)
@@ -205,9 +207,15 @@ public class Final {
                             System.out.println("Peringatan Pelanggaran Cukup Berat Tingkat III");
                         else if (poinPelanggaran > 60 && poin <= 70)
                             System.out.println("Peringatan Pelanggaran Berat Tingkat II");
-                        else
+                        else {
                             System.out.println("Peringatan Pelanggaran Sangat Berat Tingkat I");
-
+                        }
+                        System.out.print("Exit (true) : ");
+                            exitBoolean = sc08.nextBoolean();
+                            System.out.println();    
+                            if (exitBoolean) {
+                                break;
+                            }
                         break;
 
                     case 4:
@@ -234,25 +242,20 @@ public class Final {
                                 break;
                             default:
                                 System.out.println("Pilihan yang Anda masukkan tidak valid.");
-
                         }
-                        System.out.println("Terima kasih telah berpartisipasi!");
-                        break;
+                        System.out.print("Exit (true) : ");
+                                exitBoolean = sc08.nextBoolean();
+                                System.out.println();    
+                                if (exitBoolean) {
+                                    System.out.println("Terima kasih telah berpartisipasi!");
+                                    break;
+                                }
                     case 5:
                         System.out.println("===========================================");
                         System.out.println("[       Daftar Kompensasi Mahasiswa       ]");
                         System.out.println("===========================================");
-                        System.out.println("========Jumlah Alpha : 5jam ===============");
-                        System.out.println("======= Jumlah Kompensasi : 10jam =========\n");
-                        System.out.println("===========================================");
-                        System.out.println("[            Riwayat Kompensasi           ]");
-                        System.out.println("===========================================");
-                        System.out.println("  Tanggal 2 September 2023 | alpha = 2jam  ");
-                        System.out.println("  Tanggal 9 Oktober 2023   | alpha = 3jam  ");
-                        System.out.println("===========================================\n");
-
-                        String kompen;
-                        int jatahKompen, jatahKompenSelesai;
+                        System.out.println("========Jumlah Alpha : "+ jamAlfaK +"jam ===============");
+                        System.out.println("======= Jumlah Kompensasi : "+jamKompensasiK+"jam =========\n");
 
                         System.out.print("Masukkan jumlah kompensasi anda: ");
                         jatahKompen = sc08.nextInt();
@@ -327,9 +330,9 @@ public class Final {
                         break;
 
                     case 8:
-                        System.out.println("======================================================");
+                        System.out.println("=======================================================");
                         System.out.println("[                   Manajemen Akun                    ]");
-                        System.out.println("======================================================");
+                        System.out.println("=======================================================");
                         System.out.println("      Apakah anda ingin mengedit info akun anda?      ");
                         break;
 
@@ -337,6 +340,8 @@ public class Final {
                         System.out.print("Keluar dari sistem? (y/t): ");
                         String keluar = sc08.next();
                         if (keluar.equalsIgnoreCase("y")) {
+                            System.out.println();
+                            System.out.println("Terimakasih telah menggunakan program ini!");
                             run=false;
                             break;
                         } else {
@@ -344,6 +349,13 @@ public class Final {
                         }
                 }
             } while (run);
+        } else if (loginDosen) {
+            
+        }
+        else if (paswordSalah) {
+            System.out.println("Password Salah");
+        } else {
+            System.out.println("Username Salah!");
         }
     }
 }
