@@ -31,7 +31,7 @@ public class Final {
         Scanner sc08 = new Scanner(System.in);
 
         boolean run = true, loginAdmin = false, loginMahasiswa = false, loginDosen = false, paswordSalah = false,
-                exitBoolean = false, logout = false, logoutDosen = false, logoutMahasiswa = false, logoutProgram = false, keluarKategori = false, keluarData = false, keluarDataDosen = false, keluarDataAdmin = false, keluarDataMahasiswa = false, keluarKompensasi = false;
+                exitBoolean = false, logout = false, logoutDosen = false, logoutMahasiswa = false, logoutProgram = false, keluarKategori = false, keluarPelaporan = false, keluarTanggapan= false, keluarData = false, keluarDataDosen = false, keluarDataAdmin = false, keluarDataMahasiswa = false, keluarKompensasi = false, keluarPelaporan = false;
         String feedbackDosen, exit, kompen;
         int poin = 0, jamAlfaK = 0, jamKompensasiK = 0, jatahKompen, jatahKompenSelesai;
 
@@ -799,10 +799,83 @@ public class Final {
                             } while (!keluarKompensasi);
                             break;
                         case 4:
-                            
+                            do {
+                                System.out.println("============================================");
+                                System.out.println("[           Pelaporan Pelanggaran          ]");
+                                System.out.println("============================================");
+                                System.out.println("[ MENU :                                   ]");
+                                System.out.println("[ 1.                                       ]");
+                                System.out.println("[ 2.                                       ]");
+                                System.out.println("[ 3.                                       ]");
+                                System.out.println("[ 4. Exit                                  ]");
+
+                                System.out.print("Pilih menu (1/2/3?) : ");
+                                int menuAdminPelaporan = sc08.nextInt();
+
+                                switch (menuAdminPelaporan) {
+                                    case 1:
+                                        
+                                        break;
+                                    case 2:
+                                        
+                                        break;
+                                    case 3:
+                                        
+                                        break;
+                                    case 4:
+                                        System.out.println();
+                                        keluarPelaporan = true;
+                                        break;
+                                    default:
+                                        System.out.println();
+                                        System.out.println("============================================");
+                                        System.out.println("[ Pilihan anda tidak valid!                ]");
+                                        System.out.println("[ Silahkan masukkan menu yang valid!       ]");
+                                        System.out.println("============================================");
+                                        System.out.println();
+                                        keluarPelaporan = false;
+                                        break;
+                                }
+                            } while (!keluarPelaporan);
                             break;
                         case 5:
-                            
+                            do {
+                                System.out.println("============================================");
+                                System.out.println("[            Feedback / Tanggapan          ]");
+                                System.out.println("============================================");
+                                System.out.println("[ MENU :                                   ]");
+                                System.out.println("[ 1.                                       ]");
+                                System.out.println("[ 2.                                       ]");
+                                System.out.println("[ 3.                                       ]");
+                                System.out.println("[ 4. Exit                                  ]");
+
+                                System.out.print("Pilih menu (1/2/3?) : ");
+                                int menuAdminTanggapan = sc08.nextInt();
+                                switch (menuAdminTanggapan) {
+                                    case 1:
+                                        
+                                        break;
+                                    case 2:
+                                        
+                                        break;
+                                    case 3:
+                                        
+                                        break;
+                                    case 4:
+                                        System.out.println();
+                                        keluarTanggapan = true;
+                                        break;
+                                    default:
+                                        System.out.println();
+                                        System.out.println("============================================");
+                                        System.out.println("[ Pilihan anda tidak valid!                ]");
+                                        System.out.println("[ Silahkan masukkan menu yang valid!       ]");
+                                        System.out.println("============================================");
+                                        System.out.println();
+                                        keluarTanggapan = false;
+                                        break;
+                                }
+                            } while (!keluarTanggapan);
                             break;
                         case 6:
                             if (menu == 6) {
