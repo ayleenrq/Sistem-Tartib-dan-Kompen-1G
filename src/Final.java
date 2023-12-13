@@ -31,7 +31,7 @@ public class Final {
         Scanner sc08 = new Scanner(System.in);
 
         boolean run = true, loginAdmin = false, loginMahasiswa = false, loginDosen = false, paswordSalah = false,
-                exitBoolean = false, logout = false, logoutDosen = false, logoutMahasiswa = false, logoutProgram = false, keluarKategori = false, keluarPelaporan = false, keluarTanggapan= false, keluarData = false, keluarDataDosen = false, keluarDataAdmin = false, keluarDataMahasiswa = false, keluarKompensasi = false, keluarPelaporan = false;
+                exitBoolean = false, logout = false, logoutDosen = false, logoutMahasiswa = false, logoutProgram = false, keluarKategori = false, keluarPelaporan = false, keluarTanggapan = false, keluarData = false, keluarDataDosen = false, keluarDataAdmin = false, keluarDataMahasiswa = false, keluarKompensasi = false;
         String feedbackDosen, exit, kompen;
         int poin = 0, jamAlfaK = 0, jamKompensasiK = 0, jatahKompen, jatahKompenSelesai;
 
