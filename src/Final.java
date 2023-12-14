@@ -480,7 +480,7 @@ public class Final {
                         }
                         System.out.println("Masukkan Feedback/Tanggapan: ");
                         String tanggapan = sc08.next();
-                        System.out.println(mahasiswa + "taggapan dari dosen: " + tanggapan);
+                        System.out.println( "tanggapan dari dosen: " + tanggapan);
                         System.out.print("Exit (true) : ");
                         exitBoolean = sc08.nextBoolean();
                         System.out.println();
