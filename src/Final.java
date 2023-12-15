@@ -416,39 +416,12 @@ public class Final {
                             }
 
                             break;
-
-<<<<<<< HEAD
-                        mahasiswa = "";
-                        switch (choice) {
-                            case 1:
-                                mahasiswa = "Adham";
-                                break;
-                            case 2:
-                                mahasiswa = "Marsya";
-                                break;
-                            case 3:
-                                mahasiswa = "Ayleen";
-                                break;
-                            default:
-                                System.out.println("Pilihan tidak valid.");
-                                return;
-                        }
-                        System.out.println("Masukkan Feedback/Tanggapan: ");
-                        String tanggapan = sc08.next();
-                        System.out.println( "tanggapan dari dosen: " + tanggapan);
-                        System.out.print("Exit (true) : ");
-                        exitBoolean = sc08.nextBoolean();
-                        System.out.println();
-                        if (exitBoolean) {
-=======
                         case 8:
                             System.out.println("=======================================================");
                             System.out.println("[                   Manajemen Akun                    ]");
                             System.out.println("=======================================================");
                             System.out.println("      Apakah anda ingin mengedit info akun anda?      ");
->>>>>>> 85da6824705a202ab736612253036ed2a0690af1
                             break;
-
                         case 9:
                             if (menu == 9) {
                                 System.out.println("Terimakasih telah menggunakan program ini!");
