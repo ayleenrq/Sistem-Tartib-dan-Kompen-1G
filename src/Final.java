@@ -134,8 +134,9 @@ public class Final {
                     " "
             }
     };
-    
-    static int indeksAkun =-1;
+
+    static int indeksAkun = -1;
+
     public static void main(String[] args) {
         Scanner sc08 = new Scanner(System.in);
 
@@ -208,7 +209,7 @@ public class Final {
                         }
                     } else {
                         loginMahasiswa = false;
-                    } 
+                    }
                 }
             } else if (login == 3) {
                 for (int k = 0; k < dosenAkun.length; k++) {
@@ -239,18 +240,16 @@ public class Final {
 
                 do {
                     System.out.println("============================================");
-                    System.out.println("[   Tata Tertib dan Kompensasi Mahasiswa   ]");
+                    System.out.println("[                Mahasiswa                 ]");
                     System.out.println("============================================");
                     System.out.println("[ MENU :                                   ]");
-                    System.out.println("[ 1. Kategori Tata Tertib dan Kompensasi   ]");
-                    System.out.println("[ 2. Data Mahasiswa                        ]");
-                    System.out.println("[ 3. Kompensasi                            ]");
-                    System.out.println("[ 4. Pembayaran Kompensasi                 ]");
-                    System.out.println("[ 5. Daftar Kompensasi                     ]");
-                    System.out.println("[ 6. Pelaporan Pelanggaran                 ]");
-                    System.out.println("[ 7. Cetak Resi Kompensasi                 ]");
-                    System.out.println("[ 8. Manajemen Akun                        ]");
-                    System.out.println("[ 9. Keluar                                ]");
+                    System.out.println("[ 1. Kategori Tata Tertib                  ]");
+                    System.out.println("[ 2. Kategori Kompensansi                  ]");
+                    System.out.println("[ 3. Data Mahasiswa                        ]");
+                    System.out.println("[ 4. Kompensasi dan Pelanggaran Tata Tertib]");
+                    System.out.println("[ 5. Cetak Resi Mahasiswa                  ]");
+                    System.out.println("[ 6. Manajemen Akun                        ]");
+                    System.out.println("[ 7. Keluar                                ]");
                     System.out.print("Pilih menu (1/2/3/?): ");
                     int menu = sc08.nextInt();
 
@@ -265,7 +264,7 @@ public class Final {
                                 break;
                             }
                             break;
-                        case 2:
+                        case 3:
                             for (int i = 0; i < dataMahasiswa.length; i++) {
                                 if (inputuser.equals(mahasiswaAkun[i][0])) {
                                     System.out.println();
@@ -287,12 +286,12 @@ public class Final {
                                 }
                             }
                             break;
-                        case 3:
+                        case 4:
                             tampilkanKompen();
                             tampilkanPembayaranKompen();
                             break;
 
-                        case 4:
+                        case 2:
                             tampilkanPembayaranKompen();
                             System.out.print("Pilih Salah Satu (1/2/3): ");
 
@@ -319,72 +318,22 @@ public class Final {
                                 break;
                             }
                         case 5:
-                        for (int i = 0; i < dataMahasiswa.length; i++) {
-                         System.out.println("===========================================");
-                            System.out.println("[       Daftar Kompensasi Mahasiswa       ]");
-                            System.out.println("===========================================");
-                            System.out.println("| Jam Alpha                : " + dataMahasiswa[i][10]);
-                            System.out.println("| Total Jam Kompensasi     : " + dataMahasiswa[i][8]);
-                            System.out.println("| Kategori Kompen          : " + dataMahasiswa[i][6]);
-                            System.out.println("| Pelanggaran Tata Tertib  : " + dataMahasiswa[i][9]);
-                            System.out.println("| Kategori Sanksi          : " + dataMahasiswa[i][7]);   
-                            exitBoolean = sc08.nextBoolean();
-                            System.out.println();
-                            if (exitBoolean) {
-                            break;
+                            for (int i = 0; i < dataMahasiswa.length; i++) {
+                                System.out.println("===========================================");
+                                System.out.println("[       Daftar Kompensasi Mahasiswa       ]");
+                                System.out.println("===========================================");
+                                System.out.println("| Jam Alpha                : " + dataMahasiswa[i][10]);
+                                System.out.println("| Total Jam Kompensasi     : " + dataMahasiswa[i][8]);
+                                System.out.println("| Kategori Kompen          : " + dataMahasiswa[i][6]);
+                                System.out.println("| Pelanggaran Tata Tertib  : " + dataMahasiswa[i][9]);
+                                System.out.println("| Kategori Sanksi          : " + dataMahasiswa[i][7]);
+                                exitBoolean = sc08.nextBoolean();
+                                System.out.println();
+                                if (exitBoolean) {
+                                    break;
+                                }
                             }
-                        }
-
                         case 6:
-                            System.out.println("======================================================");
-                            System.out.println("[              Pelaporan Pelanggaran                 ]");
-                            System.out.println("======================================================");
-                            break;
-
-                        case 7:
-                            System.out.println("======================================================");
-                            System.out.println("[              Cetak Resi Kompensasi                 ]");
-                            System.out.println("======================================================");
-                            System.out.print("Masukkan nama mahasiswa: ");
-                            String namaMahasiswa = sc08.next();
-                            System.out.print("Masukkan banyaknya jam alfa: ");
-                            int jamAlfa = sc08.nextInt();
-
-                            int jamKompensasi = jamAlfa * 2;
-                            System.out.println("Jam Kompensasi yang didapat: " + jamKompensasi);
-                            int pembayaranKompensasi = 0;
-
-                            System.out.print("Apakah Anda ingin mencetak resi? (y/t): ");
-                            char cetakResi = sc08.next().charAt(0);
-                            if (cetakResi == 'y' || cetakResi == 'Y') {
-                                System.out.println("===== Resi Pembayaran Kompensasi =====");
-                                System.out.println("Nama Mahasiswa: " + namaMahasiswa);
-                                System.out.println("Banyaknya Jam Alfa: " + jamAlfa);
-                                System.out.println("Jam Kompensasi: " + jamKompensasi);
-                            }
-                            System.out.println("Pilih kategori pembayaran:");
-                            System.out.println("1. 2-4 jam = Membersihkan kamar mandi");
-                            System.out.println("2. 5-6 jam = Membersihkan taman");
-                            System.out.println("3. 7-10 jam = Menjadi Panitia sebuah event");
-                            System.out.print("Pilih Salah Satu (1/2/3): ");
-                            int kategori = sc08.nextInt();
-
-                            switch (kategori) {
-                                case 1:
-                                    System.out.println("Membersihkan kamar mandi");
-                                    break;
-                                case 2:
-                                    System.out.println("Membersihkan taman");
-                                    break;
-                                case 3:
-                                    System.out.println("Menjadi Panitia Sebuah Event");
-                                    break;
-                                default:
-                                    System.out.println("Kategori tidak valid.");
-                            }
-
-                            break;
-                        case 8:
                             System.out.println("=======================================================");
                             System.out.println("[                   Manajemen Akun                    ]");
                             System.out.println("=======================================================");
@@ -401,8 +350,8 @@ public class Final {
                                 break;
                             }
                             break;
-                        case 9:
-                            if (menu == 9) {
+                        case 7:
+                            if (menu == 7) {
                                 System.out.println("Terimakasih telah menggunakan program ini!");
                                 System.out.println();
                                 exitBoolean = true;
