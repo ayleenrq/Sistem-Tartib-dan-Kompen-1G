@@ -134,6 +134,7 @@ public class Final {
                     " "
             }
     };
+    
     static int indeksAkun =-1;
     public static void main(String[] args) {
         Scanner sc08 = new Scanner(System.in);
@@ -316,33 +317,21 @@ public class Final {
                                 break;
                             }
                         case 5:
-                            System.out.println("===========================================");
+                        for (int i = 0; i < dataMahasiswa.length; i++) {
+                         System.out.println("===========================================");
                             System.out.println("[       Daftar Kompensasi Mahasiswa       ]");
                             System.out.println("===========================================");
-                            System.out.println("========Jumlah Alpha : " + jamAlfaK + "jam ===============");
-                            System.out.println("======= Jumlah Kompensasi : " + jamKompensasiK + "jam =========\n");
-
-                            System.out.print("Masukkan jumlah kompensasi anda: ");
-                            jatahKompen = sc08.nextInt();
-
-                            do {
-                                System.out.print("Apakah anda sudah menyelesaikan kompen (sudah/belum)?");
-                                kompen = sc08.next();
-
-                                if (kompen.equalsIgnoreCase("sudah")) {
-                                    System.out.print("Jumlah jam kompen yang sudah diselesaikan: ");
-                                    jatahKompenSelesai = sc08.nextInt();
-
-                                    if (jatahKompenSelesai <= jatahKompen) {
-                                        jatahKompen -= jatahKompenSelesai;
-                                        System.out.println("Sisa jam kompen yang belum diselesaikan: " + jatahKompen);
-                                        continue;
-                                    }
-                                } else if (kompen.equalsIgnoreCase("belum")) {
-                                    continue;
-                                }
-                            } while (jatahKompen > 0);
+                            System.out.println("| Jam Alpha                : " + dataMahasiswa[i][10]);
+                            System.out.println("| Total Jam Kompensasi     : " + dataMahasiswa[i][8]);
+                            System.out.println("| Kategori Kompen          : " + dataMahasiswa[i][6]);
+                            System.out.println("| Pelanggaran Tata Tertib  : " + dataMahasiswa[i][9]);
+                            System.out.println("| Kategori Sanksi          : " + dataMahasiswa[i][7]);   
+                            exitBoolean = sc08.nextBoolean();
+                            System.out.println();
+                            if (exitBoolean) {
                             break;
+                            }
+                        }
 
                         case 6:
                             System.out.println("======================================================");
