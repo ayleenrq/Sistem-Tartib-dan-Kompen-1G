@@ -445,7 +445,7 @@ public class Final {
                                 System.out.println("Terimakasih telah menggunakan program ini!");
                                 System.out.println();
                                 exitBoolean = true;
-                                loginAdmin = false;
+                                loginMahasiswa = false;
                                 break;
                             }
                     }
@@ -1114,7 +1114,8 @@ public class Final {
 
     public static void ubahDataMahasiswa(Scanner scanner) {
         System.out.print("Masukkan NIM Mahasiswa yang ingin diubah : ");
-        String nim = scanner.next();
+        int nimBaru = scanner.nextInt();
+        String nim = String.valueOf(nimBaru);
 
         boolean found = false;
         for (String[] mahasiswa : dataMahasiswa) {
@@ -1126,6 +1127,8 @@ public class Final {
 
                 System.out.print("Masukkan Nama baru: ");
                 mahasiswa[0] = scanner.nextLine();
+
+                scanner.nextLine();
 
                 System.out.print("Masukkan Prodi baru: ");
                 mahasiswa[2] = scanner.nextLine();
@@ -1154,8 +1157,10 @@ public class Final {
 
     public static void tambahkanDataMahasiswa(Scanner scanner) {
         System.out.print("Masukkan NIM Mahasiswa baru: ");
-        String nimBaru = scanner.nextLine();
+        int nim = scanner.nextInt();
         scanner.nextLine();
+
+        String nimBaru = String.valueOf(nim);
 
         boolean found = false;
         for (String[] mahasiswa : dataMahasiswa) {
