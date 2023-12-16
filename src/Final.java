@@ -140,26 +140,22 @@ public class Final {
     public static void main(String[] args) {
         Scanner sc08 = new Scanner(System.in);
 
-        boolean run = true, loginAdmin = false, loginMahasiswa = false, loginDosen = false, paswordSalah = false,
-                exitBoolean = false, logout = false, logoutDosen = false, logoutMahasiswa = false,
-                logoutProgram = false, keluarKategori = false, keluarPelaporan = false, keluarTanggapan = false,
+        boolean loginAdmin = false, loginMahasiswa = false, loginDosen = false, paswordSalah = false,
+                exitBoolean = false, logoutProgram = false, keluarKategori = false,
                 keluarData = false, keluarDataDosen = false, keluarDataAdmin = false, keluarDataMahasiswa = false,
-                keluarKompensasi = false, keluarKompensasiPembayaran = false;
-        String feedbackDosen, exit, kompen;
-        int poin = 0, jamAlfaK = 0, jamKompensasiK = 0, jatahKompen, jatahKompenSelesai;
-
+                keluarKompensasi = false;
         do {
             boolean iscont = true;
 
-            System.out.println("============================================");
-            System.out.println("[                  LOGIN                   ]");
-            System.out.println("============================================");
-            System.out.println("[ Pilih Login sebagai :                    ]");
-            System.out.println("[ 1. Login Admin                           ]");
-            System.out.println("[ 2. Login Mahasiswa                       ]");
-            System.out.println("[ 3. Login Dosen                           ]");
-            System.out.println("[ 4. Exit                                  ]");
-            System.out.print("Pilih menu (1/2/3): ");
+            System.out.println("+=================================================================================+");
+            System.out.println("[                                     LOGIN                                       ]");
+            System.out.println("+=================================================================================+");
+            System.out.println("| Pilih Login sebagai :                                                           |");
+            System.out.println("| 1. Login Admin                                                                  |");
+            System.out.println("| 2. Login Mahasiswa                                                              |");
+            System.out.println("| 3. Login Dosen                                                                  |");
+            System.out.println("| 4. Exit                                                                         |");
+            System.out.print("| Pilih menu (1/2/3): ");
             int login = sc08.nextInt();
 
             if (login == 4) {
@@ -239,18 +235,18 @@ public class Final {
                 System.out.println();
 
                 do {
-                    System.out.println("============================================");
-                    System.out.println("[                Mahasiswa                 ]");
-                    System.out.println("============================================");
-                    System.out.println("[ MENU :                                   ]");
-                    System.out.println("[ 1. Kategori Tata Tertib                  ]");
-                    System.out.println("[ 2. Kategori Kompensansi                  ]");
-                    System.out.println("[ 3. Data Mahasiswa                        ]");
-                    System.out.println("[ 4. Kompensasi dan Pelanggaran Tata Tertib]");
-                    System.out.println("[ 5. Cetak Resi Mahasiswa                  ]");
-                    System.out.println("[ 6. Manajemen Akun                        ]");
-                    System.out.println("[ 7. Keluar                                ]");
-                    System.out.print("Pilih menu (1/2/3/?): ");
+                    System.out.println("+=================================================================================+");
+                    System.out.println("[                                   Mahasiswa                                     ]");
+                    System.out.println("+=================================================================================+");
+                    System.out.println("| MENU :                                                                          |");
+                    System.out.println("| 1. Kategori Tata Tertib                                                         |");
+                    System.out.println("| 2. Kategori Kompensansi                                                         |");
+                    System.out.println("| 3. Data Mahasiswa                                                               |");
+                    System.out.println("| 4. Kompensasi dan Pelanggaran Tata Tertib                                       |");
+                    System.out.println("| 5. Cetak Resi Mahasiswa                                                         |");
+                    System.out.println("| 6. Manajemen Akun                                                               |");
+                    System.out.println("| 7. Keluar                                                                       |");
+                    System.out.print("| Pilih menu (1/2/3/?): ");
                     int menu = sc08.nextInt();
 
                     switch (menu) {
@@ -268,16 +264,16 @@ public class Final {
                             for (int i = 0; i < dataMahasiswa.length; i++) {
                                 if (inputuser.equals(mahasiswaAkun[i][0])) {
                                     System.out.println();
-                                    System.out.println("============================================");
-                                    System.out.println("[              Data Mahasiswa              ]");
-                                    System.out.println("============================================");
-                                    System.out.println("[ Nama Mahasiswa : " + dataMahasiswa[i][0]);
-                                    System.out.println("[ NIM            : " + dataMahasiswa[i][1]);
-                                    System.out.println("[ Jurusan        : " + dataMahasiswa[i][2]);
-                                    System.out.println("[ Prodi          : " + dataMahasiswa[i][3]);
-                                    System.out.println("[ Kelas          : " + dataMahasiswa[i][4]);
-                                    System.out.println("[ Nomor Absen    : " + dataMahasiswa[i][5]);
-                                    System.out.print("Exit (true) : ");
+                                    System.out.println("+=================================================================================+");
+                                    System.out.println("[                                  Data Mahasiswa                                 ]");
+                                    System.out.println("+=================================================================================+");
+                                    System.out.println("| Nama Mahasiswa : " + dataMahasiswa[i][0]);
+                                    System.out.println("| NIM            : " + dataMahasiswa[i][1]);
+                                    System.out.println("| Jurusan        : " + dataMahasiswa[i][2]);
+                                    System.out.println("| Prodi          : " + dataMahasiswa[i][3]);
+                                    System.out.println("| Kelas          : " + dataMahasiswa[i][4]);
+                                    System.out.println("| Nomor Absen    : " + dataMahasiswa[i][5]);
+                                    System.out.print("| Exit (true) : ");
                                     exitBoolean = sc08.nextBoolean();
                                     System.out.println();
                                     if (exitBoolean) {
@@ -319,9 +315,9 @@ public class Final {
                             }
                         case 5:
                             for (int i = 0; i < dataMahasiswa.length; i++) {
-                                System.out.println("===========================================");
-                                System.out.println("[       Daftar Kompensasi Mahasiswa       ]");
-                                System.out.println("===========================================");
+                                System.out.println("+=================================================================================+");
+                                System.out.println("[                           Daftar Kompensasi Mahasiswa                           ]");
+                                System.out.println("+=================================================================================+");
                                 System.out.println("| Jam Alpha                : " + dataMahasiswa[i][10]);
                                 System.out.println("| Total Jam Kompensasi     : " + dataMahasiswa[i][8]);
                                 System.out.println("| Kategori Kompen          : " + dataMahasiswa[i][6]);
@@ -334,14 +330,14 @@ public class Final {
                                 }
                             }
                         case 6:
-                            System.out.println("=======================================================");
-                            System.out.println("[                   Manajemen Akun                    ]");
-                            System.out.println("=======================================================");
-                            System.out.println("      Apakah anda ingin mengedit info akun anda?      ");
-                            System.out.println("1. Ya");
-                            System.out.println("2. Tidak");
-                            System.out.println("=======================================================");
-                            System.out.print("Pilihan anda: ");
+                            System.out.println("+=================================================================================+");
+                            System.out.println("[                                 Manajemen Akun                                  ]");
+                            System.out.println("+=================================================================================+");
+                            System.out.println("| Apakah anda ingin mengedit info akun anda?                                      |");
+                            System.out.println("| 1. Ya                                                                           |");
+                            System.out.println("| 2. Tidak                                                                        |");
+                            System.out.println("+=================================================================================+");
+                            System.out.print("| Pilihan anda : ");
                             menu = sc08.nextInt();
                             if (menu == 1) {
                                 System.out.println("Ingin mengedit password anda?");
@@ -365,34 +361,28 @@ public class Final {
                 System.out.println();
 
                 do {
-                    System.out.println("============================================");
-                    System.out.println("[                  Dosen                   ]");
-                    System.out.println("============================================");
-                    System.out.println("[ MENU :                                   ]");
-                    System.out.println("[ 1. Pelaporan Pelanggaran                 ]");
-                    System.out.println("[ 2. Input Jam Alpa Mahasiswa              ]");
-                    System.out.println("[ 3. Daftar Jam Kompensasi                 ]");
-                    System.out.println("[ 4. Pembayaran Kompensasi                 ]");
-                    System.out.println("[ 5. Pembayaran Sanksi                     ]");
-                    System.out.println("[ 6. Feedback/Tanggapan                    ]");
-                    System.out.println("[ 7. Cek Data Mahasiswa                    ]");
-                    System.out.println("[ 8. Logout                                ]");
-
-
-
-
-                    System.out.print("Pilih menu (1/2/3?): ");
+                    System.out.println("+=================================================================================+");
+                    System.out.println("[                                      Dosen                                      ]");
+                    System.out.println("+=================================================================================+");
+                    System.out.println("| MENU :                                                                          |");
+                    System.out.println("| 1. Pelaporan Pelanggaran                                                        |");
+                    System.out.println("| 2. Input Jam Alpa Mahasiswa                                                     |");
+                    System.out.println("| 3. Daftar Jam Kompensasi                                                        |");
+                    System.out.println("| 4. Pembayaran Kompensasi                                                        |");
+                    System.out.println("| 5. Pembayaran Sanksi                                                            |");
+                    System.out.println("| 6. Feedback/Tanggapan                                                           |");
+                    System.out.println("| 7. Cek Data Mahasiswa                                                           |");
+                    System.out.println("| 8. Logout                                                                       |");
+                    System.out.print("| Pilih menu (1/2/3?): ");
                     int menu = sc08.nextInt();
 
                     switch (menu) {
                         case 1:
                             laporPelanggaran(sc08);
                             break;
-
                         case 2:
                             tambahkanJamAlpha(sc08);
                             break;
-
                         case 3:
                             daftarKompensasiMahasiswa(sc08);
                             break;
@@ -413,14 +403,14 @@ public class Final {
                                 System.out.println("Terimakasih telah menggunakan program ini!");
                                 System.out.println();
                                 exitBoolean = true;
-                                loginAdmin = false;
+                                loginDosen = false;
                                 break;
                             }
                         default:
-                            System.out.println("============================================");
-                            System.out.println("[ Pilihan anda tidak valid!                ]");
-                            System.out.println("[ Silahkan masukkan menu yang valid!       ]");
-                            System.out.println("============================================");
+                            System.out.println("+=================================================================================+");
+                            System.out.println("| Pilihan anda tidak valid!                                                       |");
+                            System.out.println("| Silahkan masukkan menu yang valid!                                              |");
+                            System.out.println("+=================================================================================+");
                             exitBoolean = false;
                             break;
                     }
@@ -431,34 +421,32 @@ public class Final {
                 System.out.println();
 
                 do {
-                    System.out.println("============================================");
-                    System.out.println("[                  Admin                   ]");
-                    System.out.println("============================================");
-                    System.out.println("[ MENU :                                   ]");
-                    System.out.println("[ 1. Kategori Tata Tertib dan Kompensasi   ]");
-                    System.out.println("[ 2. Manajemen Akun                        ]");
-                    System.out.println("[ 3. Kompensasi Mahasiswa                  ]");
-                    System.out.println("[ 4. Pelaporan Pelanggaran                 ]");
-                    System.out.println("[ 5. Feedback/Tanggapan                    ]");
-                    System.out.println("[ 6. Cek Data Mahasiswa                    ]");
-                    System.out.println("[ 7. Riwayat                               ]");
-                    System.out.println("[ 8. Logout                                ]");
-
-                    System.out.print("Pilih menu (1/2/3?) : ");
+                    System.out.println("+=================================================================================+");
+                    System.out.println("[                                      Admin                                      ]");
+                    System.out.println("+=================================================================================+");
+                    System.out.println("| MENU :                                                                          |");
+                    System.out.println("| 1. Kategori Tata Tertib dan Kompensasi                                          |");
+                    System.out.println("| 2. Manajemen Akun                                                               |");
+                    System.out.println("| 3. Kompensasi Mahasiswa                                                         |");
+                    System.out.println("| 4. Pelaporan Pelanggaran                                                        |");
+                    System.out.println("| 5. Feedback/Tanggapan                                                           |");
+                    System.out.println("| 6. Cek Data Mahasiswa                                                           |");
+                    System.out.println("| 7. Riwayat                                                                      |");
+                    System.out.println("| 8. Logout                                                                       |");
+                    System.out.print("| Pilih menu (1/2/3?) : ");
                     int menu = sc08.nextInt();
 
                     switch (menu) {
                         case 1:
                             do {
-                                System.out.println("============================================");
-                                System.out.println("[     Kategori Tata Tertib & Kompensasi    ]");
-                                System.out.println("============================================");
-                                System.out.println("[ MENU :                                   ]");
-                                System.out.println("[ 1. Kategori Tata Tertib                  ]");
-                                System.out.println("[ 2. Kategori Kompensasi                   ]");
-                                System.out.println("[ 3. Exit                                  ]");
-
-                                System.out.print("Pilih menu (1/2/3?) : ");
+                                System.out.println("+=================================================================================+");
+                                System.out.println("[                        Kategori Tata Tertib & Kompensasi                        ]");
+                                System.out.println("+=================================================================================+");
+                                System.out.println("| MENU :                                                                          |");
+                                System.out.println("| 1. Kategori Tata Tertib                                                         |");
+                                System.out.println("| 2. Kategori Kompensasi                                                          |");
+                                System.out.println("| 3. Exit                                                                         |");
+                                System.out.print("| Pilih menu (1/2/3?) : ");
                                 int menuAdminTatib = sc08.nextInt();
 
                                 switch (menuAdminTatib) {
@@ -484,10 +472,10 @@ public class Final {
                                         break;
                                     default:
                                         System.out.println();
-                                        System.out.println("============================================");
-                                        System.out.println("[ Pilihan anda tidak valid!                ]");
-                                        System.out.println("[ Silahkan masukkan menu yang valid!       ]");
-                                        System.out.println("============================================");
+                                        System.out.println("+=================================================================================+");
+                                        System.out.println("| Pilihan anda tidak valid!                                                       |");
+                                        System.out.println("| Silahkan masukkan menu yang valid!                                              |");
+                                        System.out.println("+=================================================================================+");
                                         System.out.println();
                                         keluarKategori = false;
                                         break;
@@ -496,31 +484,29 @@ public class Final {
                             break;
                         case 2:
                             do {
-                                System.out.println("============================================");
-                                System.out.println("[              Manajemen Akun              ]");
-                                System.out.println("============================================");
-                                System.out.println("[ MENU :                                   ]");
-                                System.out.println("[ 1. Akun Dosen                            ]");
-                                System.out.println("[ 2. Akun Mahasiswa                        ]");
-                                System.out.println("[ 3. Akun Admin                            ]");
-                                System.out.println("[ 4. Exit                                  ]");
-
-                                System.out.print("Pilih menu (1/2/3?) : ");
+                                System.out.println("+=================================================================================+");
+                                System.out.println("[                                  Manajemen Akun                                 ]");
+                                System.out.println("+=================================================================================+");
+                                System.out.println("| MENU :                                                                          |");
+                                System.out.println("| 1. Akun Dosen                                                                   |");
+                                System.out.println("| 2. Akun Mahasiswa                                                               |");
+                                System.out.println("| 3. Akun Admin                                                                   |");
+                                System.out.println("| 4. Exit                                                                         |");
+                                System.out.print("| Pilih menu (1/2/3?) : ");
                                 int menuAdminData = sc08.nextInt();
 
                                 switch (menuAdminData) {
                                     case 1:
                                         do {
-                                            System.out.println("============================================");
-                                            System.out.println("[                Akun Dosen                ]");
-                                            System.out.println("============================================");
-                                            System.out.println("[ MENU :                                   ]");
-                                            System.out.println("[ 1. Tampilkan Akun Dosen                  ]");
-                                            System.out.println("[ 2. Ubah Akun Dosen                       ]");
-                                            System.out.println("[ 3. Tambahkan Akun Dosen                  ]");
-                                            System.out.println("[ 4. Exit                                  ]");
-
-                                            System.out.print("Pilih menu (1/2/3?) : ");
+                                            System.out.println("+=================================================================================+");
+                                            System.out.println("[                                   Akun Dosen                                    ]");
+                                            System.out.println("+=================================================================================+");
+                                            System.out.println("| MENU :                                                                          |");
+                                            System.out.println("| 1. Tampilkan Akun Dosen                                                         |");
+                                            System.out.println("| 2. Ubah Akun Dosen                                                              |");
+                                            System.out.println("| 3. Tambahkan Akun Dosen                                                         |");
+                                            System.out.println("| 4. Exit                                                                         |");
+                                            System.out.print("| Pilih menu (1/2/3?) : ");
                                             int menuAdminDataDosen = sc08.nextInt();
 
                                             switch (menuAdminDataDosen) {
@@ -538,10 +524,10 @@ public class Final {
                                                     break;
                                                 default:
                                                     System.out.println();
-                                                    System.out.println("============================================");
-                                                    System.out.println("[ Pilihan anda tidak valid!                ]");
-                                                    System.out.println("[ Silahkan masukkan menu yang valid!       ]");
-                                                    System.out.println("============================================");
+                                                    System.out.println("+=================================================================================+");
+                                                    System.out.println("| Pilihan anda tidak valid!                                                       |");
+                                                    System.out.println("| Silahkan masukkan menu yang valid!                                              |");
+                                                    System.out.println("+=================================================================================+");
                                                     System.out.println();
                                                     keluarDataDosen = false;
                                                     break;
@@ -550,19 +536,18 @@ public class Final {
                                         break;
                                     case 2:
                                         do {
-                                            System.out.println("============================================");
-                                            System.out.println("[              Akun Mahasiswa              ]");
-                                            System.out.println("============================================");
-                                            System.out.println("[ MENU :                                   ]");
-                                            System.out.println("[ 1. Ubah Akun Mahasiswa                   ]");
-                                            System.out.println("[ 2. Ubah Data Mahasiswa                   ]");
-                                            System.out.println("[ 3. Tambahkan Akun Mahasiswa              ]");
-                                            System.out.println("[ 4. Tambahkan Data Mahasiswa              ]");
-                                            System.out.println("[ 5. Tampilkan Akun Mahasiswa              ]");
-                                            System.out.println("[ 6. Tampilkan Data Mahasiswa              ]");
-                                            System.out.println("[ 7. Exit                                  ]");
-
-                                            System.out.print("Pilih menu (1/2/3?) : ");
+                                            System.out.println("+=================================================================================+");
+                                            System.out.println("[                                   Akun Mahasiswa                                |");
+                                            System.out.println("+=================================================================================+");
+                                            System.out.println("| MENU :                                                                          |");
+                                            System.out.println("| 1. Ubah Akun Mahasiswa                                                          |");
+                                            System.out.println("| 2. Ubah Data Mahasiswa                                                          |");
+                                            System.out.println("| 3. Tambahkan Akun Mahasiswa                                                     |");
+                                            System.out.println("| 4. Tambahkan Data Mahasiswa                                                     |");
+                                            System.out.println("| 5. Tampilkan Akun Mahasiswa                                                     |");
+                                            System.out.println("| 6. Tampilkan Data Mahasiswa                                                     |");
+                                            System.out.println("| 7. Exit                                                                         |");
+                                            System.out.print("| Pilih menu (1/2/3?) : ");
                                             int menuAdminDataMahasiswa = sc08.nextInt();
 
                                             switch (menuAdminDataMahasiswa) {
@@ -589,10 +574,10 @@ public class Final {
                                                     break;
                                                 default:
                                                     System.out.println();
-                                                    System.out.println("============================================");
-                                                    System.out.println("[ Pilihan anda tidak valid!                ]");
-                                                    System.out.println("[ Silahkan masukkan menu yang valid!       ]");
-                                                    System.out.println("============================================");
+                                                    System.out.println("+=================================================================================+");
+                                                    System.out.println("| Pilihan anda tidak valid!                                                       |");
+                                            	    System.out.println("| Silahkan masukkan menu yang valid!                                              |");
+                                                    System.out.println("+=================================================================================+");
                                                     System.out.println();
                                                     keluarDataMahasiswa = false;
                                                     break;
@@ -601,16 +586,15 @@ public class Final {
                                         break;
                                     case 3:
                                         do {
-                                            System.out.println("============================================");
-                                            System.out.println("[                Akun Admin                ]");
-                                            System.out.println("============================================");
-                                            System.out.println("[ MENU :                                   ]");
-                                            System.out.println("[ 1. Tampilkan Akun Admin                  ]");
-                                            System.out.println("[ 2. Ubah Akun Admin                       ]");
-                                            System.out.println("[ 3. Tambahkan Akun Admin                  ]");
-                                            System.out.println("[ 4. Exit                                  ]");
-
-                                            System.out.print("Pilih menu (1/2/3?) : ");
+                                            System.out.println("+=================================================================================+");
+                                            System.out.println("[                                   Akun Admin                                    ]");
+                                            System.out.println("+=================================================================================+");
+                                            System.out.println("| MENU :                                                                          |");
+                                            System.out.println("| 1. Tampilkan Akun Admin                                                         |");
+                                            System.out.println("| 2. Ubah Akun Admin                                                              |");
+                                            System.out.println("| 3. Tambahkan Akun Admin                                                         |");
+                                            System.out.println("| 4. Exit                                                                         |");
+                                            System.out.print("| Pilih menu (1/2/3?) : ");
                                             int menuAdminDataAdmin = sc08.nextInt();
 
                                             switch (menuAdminDataAdmin) {
@@ -628,10 +612,10 @@ public class Final {
                                                     break;
                                                 default:
                                                     System.out.println();
-                                                    System.out.println("============================================");
-                                                    System.out.println("[ Pilihan anda tidak valid!                ]");
-                                                    System.out.println("[ Silahkan masukkan menu yang valid!       ]");
-                                                    System.out.println("============================================");
+                                                    System.out.println("+=================================================================================+");
+                                                    System.out.println("| Pilihan anda tidak valid!                                                       |");
+                                                    System.out.println("| Silahkan masukkan menu yang valid!                                              |");
+                                                    System.out.println("+=================================================================================+");
                                                     System.out.println();
                                                     keluarDataAdmin = false;
                                                     break;
@@ -644,10 +628,10 @@ public class Final {
                                         break;
                                     default:
                                         System.out.println();
-                                        System.out.println("============================================");
-                                        System.out.println("[ Pilihan anda tidak valid!                ]");
-                                        System.out.println("[ Silahkan masukkan menu yang valid!       ]");
-                                        System.out.println("======================================5======");
+                                        System.out.println("+=================================================================================+");
+                                        System.out.println("| Pilihan anda tidak valid!                                                       |");
+                                        System.out.println("| Silahkan masukkan menu yang valid!                                              |");
+                                        System.out.println("+=================================================================================+");
                                         System.out.println();
                                         keluarData = false;
                                         break;
@@ -656,17 +640,16 @@ public class Final {
                             break;
                         case 3:
                             do {
-                                System.out.println("============================================");
-                                System.out.println("[           Kompensasi Mahasiswa           ]");
-                                System.out.println("============================================");
-                                System.out.println("[ MENU :                                   ]");
-                                System.out.println("[ 1. Pembayaran Kompensasi                 ]");
-                                System.out.println("[ 2. Pembayaran Sanksi                     ]");
-                                System.out.println("[ 3. Input Jam Alpha Mahasiswa             ]");
-                                System.out.println("[ 4. Daftar Jam Kompensasi                 ]");
-                                System.out.println("[ 5. Exit                                  ]");
-
-                                System.out.print("Pilih menu (1/2/3?) : ");
+                                System.out.println("+=================================================================================+");
+                                System.out.println("[                              Kompensasi Mahasiswa                               ]");
+                                System.out.println("+=================================================================================+");
+                                System.out.println("| MENU :                                                                          |");
+                                System.out.println("| 1. Pembayaran Kompensasi                                                        |");
+                                System.out.println("| 2. Pembayaran Sanksi                                                            |");
+                                System.out.println("| 3. Input Jam Alpha Mahasiswa                                                    |");
+                                System.out.println("| 4. Daftar Jam Kompensasi                                                        |");
+                                System.out.println("| 5. Exit                                                                         |");
+                                System.out.print("| Pilih menu (1/2/3?) : ");
                                 int menuAdminKompensasi = sc08.nextInt();
 
                                 switch (menuAdminKompensasi) {
@@ -688,10 +671,10 @@ public class Final {
                                         break;
                                     default:
                                         System.out.println();
-                                        System.out.println("============================================");
-                                        System.out.println("[ Pilihan anda tidak valid!                ]");
-                                        System.out.println("[ Silahkan masukkan menu yang valid!       ]");
-                                        System.out.println("============================================");
+                                        System.out.println("+=================================================================================+");
+                                        System.out.println("| Pilihan anda tidak valid!                                                       |");
+                                        System.out.println("| Silahkan masukkan menu yang valid!                                              |");
+                                        System.out.println("+=================================================================================+");
                                         System.out.println();
                                         keluarKompensasi = false;
                                         break;
@@ -719,10 +702,10 @@ public class Final {
                                 break;
                             }
                         default:
-                            System.out.println("============================================");
-                            System.out.println("[ Pilihan anda tidak valid!                ]");
-                            System.out.println("[ Silahkan masukkan menu yang valid!       ]");
-                            System.out.println("============================================");
+                            System.out.println("+=================================================================================+");
+                            System.out.println("| Pilihan anda tidak valid!                                                       |");
+                            System.out.println("| Silahkan masukkan menu yang valid!                                              |");
+                            System.out.println("+=================================================================================+");
                             exitBoolean = false;
                             break;
                     }
@@ -734,9 +717,9 @@ public class Final {
     }
 
     public static void tampilkanAkunDosen() {
-        System.out.println("============================================");
-        System.out.println("[         Tampilkan Akun Dosen             ]");
-        System.out.println("============================================");
+        System.out.println("+=================================================================================+");
+        System.out.println("[                             Tampilkan Akun Dosen                                ]");
+        System.out.println("+=================================================================================+");
 
         for (String[] dosen : dosenAkun) {
             displayAkunDosen(dosen);
@@ -744,9 +727,9 @@ public class Final {
     }
 
     public static void displayAkunDosen(String[] dosen) {
-        System.out.println("============================================");
-        System.out.println("[ Username: " + dosen[0] + "              ");
-        System.out.println("[ Password: " + dosen[1] + "              ");
+        System.out.println("+=================================================================================+");
+        System.out.println("| Username: " + dosen[0] + "              ");
+        System.out.println("| Password: " + dosen[1] + "              ");
     }
 
     public static void ubahAkunDosen(Scanner scanner) {
@@ -793,9 +776,9 @@ public class Final {
     }
 
     public static void tampilkanAkunAdmin() {
-        System.out.println("============================================");
-        System.out.println("[         Tampilkan Akun Admin             ]");
-        System.out.println("============================================");
+        System.out.println("+=================================================================================+");
+        System.out.println("[                             Tampilkan Akun Admin                                ]");
+        System.out.println("+=================================================================================+");
 
         for (String[] admin : adminAkun) {
             displayAkunAdmin(admin);
@@ -803,9 +786,9 @@ public class Final {
     }
 
     public static void displayAkunAdmin(String[] admin) {
-        System.out.println("============================================");
-        System.out.println("[ Username: " + admin[0] + "              ");
-        System.out.println("[ Password: " + admin[1] + "              ");
+        System.out.println("+=================================================================================+");
+        System.out.println("| Username: " + admin[0] + "              ");
+        System.out.println("| Password: " + admin[1] + "              ");
     }
 
     public static void ubahAkunAdmin(Scanner scanner) {
@@ -976,27 +959,27 @@ public class Final {
     }
 
     public static void tampilkanDataMahasiswa() {
-        System.out.println("============================================");
+        System.out.println("+=================================================================================+");
         for (String[] mahasiswa : dataMahasiswa) {
             displayDataMahasiswa(mahasiswa);
-            System.out.println("============================================");
+            System.out.println("+=================================================================================+");
         }
     }
 
     public static void displayDataMahasiswa(String[] mahasiswa) {
-        System.out.println("============================================");
-        System.out.println("[ Nama: " + mahasiswa[0] + "              ");
-        System.out.println("[ NIM: " + mahasiswa[1] + "               ");
-        System.out.println("[ Prodi: " + mahasiswa[2] + "             ");
-        System.out.println("[ Jurusan: " + mahasiswa[3] + "           ");
-        System.out.println("[ Kelas: " + mahasiswa[4] + "             ");
-        System.out.println("[ Nomor Absen: " + mahasiswa[5] + "       ");
+        System.out.println("+=================================================================================+");
+        System.out.println("| Nama : " + mahasiswa[0] + "              ");
+        System.out.println("| NIM : " + mahasiswa[1] + "               ");
+        System.out.println("| Prodi : " + mahasiswa[2] + "             ");
+        System.out.println("| Jurusan : " + mahasiswa[3] + "           ");
+        System.out.println("| Kelas : " + mahasiswa[4] + "             ");
+        System.out.println("| Nomor Absen : " + mahasiswa[5] + "       ");
     }
 
     public static void tampilkanAkunMahasiswa() {
-        System.out.println("============================================");
-        System.out.println("[         Tampilkan Akun Mahasiswa          ]");
-        System.out.println("============================================");
+        System.out.println("+=================================================================================+");
+        System.out.println("[                            Tampilkan Akun Mahasiswa                             ]");
+        System.out.println("+=================================================================================+");
 
         for (String[] mahasiswa : mahasiswaAkun) {
             displayAkunMahasiswa(mahasiswa);
@@ -1004,9 +987,9 @@ public class Final {
     }
 
     public static void displayAkunMahasiswa(String[] mahasiswa) {
-        System.out.println("============================================");
-        System.out.println("[ Nama: " + mahasiswa[0] + "              ");
-        System.out.println("[ Password: " + mahasiswa[1] + "          ");
+        System.out.println("+=================================================================================+");
+        System.out.println("| Nama : " + mahasiswa[0] + "              ");
+        System.out.println("| Password : " + mahasiswa[1] + "          ");
     }
 
     public static String[][] concatArrays(String[][] arr1, String[][] arr2) {
@@ -1023,10 +1006,10 @@ public class Final {
     public static void tambahkanPembayaranKompen(Scanner sc08) {
         boolean keluarKompensasiPembayaran = false;
         do {
-            System.out.println("============================================");
-            System.out.println("[          Pembayaran Kompensasi           ]");
-            System.out.println("============================================");
-            System.out.println("[ Daftar Mahasiswa :                       ]");
+            System.out.println("+=================================================================================+");
+            System.out.println("[                             Pembayaran Kompensasi                               ]");
+            System.out.println("+=================================================================================+");
+            System.out.println("| Daftar Mahasiswa :                                                              |");
 
             for (int i = 0; i < dataMahasiswa.length; i++) {
                 System.out.println((i + 1) + ". " + dataMahasiswa[i][0]);
@@ -1215,10 +1198,10 @@ public class Final {
     public static void tambahkanPembayaranTatib(Scanner sc08) {
         boolean keluarTatibPembayaran = false;
         do {
-            System.out.println("============================================");
-            System.out.println("[             Pembayaran Sanksi            ]");
-            System.out.println("============================================");
-            System.out.println("[ Daftar Mahasiswa :                       ]");
+            System.out.println("+=================================================================================+");
+            System.out.println("[                                Pembayaran Sanksi                                ]");
+            System.out.println("+=================================================================================+");
+            System.out.println("| Daftar Mahasiswa :                                                              |");
 
             for (int i = 0; i < dataMahasiswa.length; i++) {
                 System.out.println((i + 1) + ". " + dataMahasiswa[i][0]);
@@ -1333,10 +1316,10 @@ public class Final {
         // int totalAlpha = 0;
 
         do {
-            System.out.println("============================================");
-            System.out.println("[                 Jam Alpha                ]");
-            System.out.println("============================================");
-            System.out.println("[ Daftar Mahasiswa :                       ]");
+            System.out.println("+=================================================================================+");
+            System.out.println("[                                    Jam Alpha                                    ]");
+            System.out.println("+=================================================================================+");
+            System.out.println("| Daftar Mahasiswa :                                                              |");
 
             for (int i = 0; i < dataMahasiswa.length; i++) {
                 System.out.println((i + 1) + ". " + dataMahasiswa[i][0]);
@@ -1395,10 +1378,10 @@ public class Final {
     public static void daftarKompensasiMahasiswa(Scanner sc08) {
         boolean keluar = false;
         do {
-            System.out.println("============================================");
-            System.out.println("[             Daftar Kompensasi            ]");
-            System.out.println("============================================");
-            System.out.println("[ Daftar Mahasiswa :                       ]");
+            System.out.println("+=================================================================================+");
+            System.out.println("[                                Daftar Kompensasi                                ]");
+            System.out.println("+=================================================================================+");
+            System.out.println("| Daftar Mahasiswa :                                                              |");
 
             for (int i = 0; i < dataMahasiswa.length; i++) {
                 System.out.println((i + 1) + ". " + dataMahasiswa[i][0]);
@@ -1461,10 +1444,10 @@ public class Final {
     public static void laporPelanggaran(Scanner sc08) {
         boolean keluar = false;
         do {
-            System.out.println("============================================");
-            System.out.println("[           Pelaporan Pelanggaran          ]");
-            System.out.println("============================================");
-            System.out.println("[ Daftar Mahasiswa :                       ]");
+            System.out.println("+=================================================================================+");
+            System.out.println("[                              Pelaporan Pelanggaran                              ]");
+            System.out.println("+=================================================================================+");
+            System.out.println("| Daftar Mahasiswa :                                                              |");
 
             for (int i = 0; i < dataMahasiswa.length; i++) {
                 System.out.println((i + 1) + ". " + dataMahasiswa[i][0]);
@@ -1629,10 +1612,10 @@ public class Final {
     public static void feedback(Scanner sc08) {
         boolean keluar = false;
         do {
-            System.out.println("============================================");
-            System.out.println("[           Feedback / Tanggapan          ]");
-            System.out.println("============================================");
-            System.out.println("[ Daftar Mahasiswa :                       ]");
+            System.out.println("+=================================================================================+");
+            System.out.println("[                                Feedback / Tanggapan                             ]");
+            System.out.println("+=================================================================================+");
+            System.out.println("| Daftar Mahasiswa :                                                              |");
 
             for (int i = 0; i < dataMahasiswa.length; i++) {
                 System.out.println((i + 1) + ". " + dataMahasiswa[i][0]);
