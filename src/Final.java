@@ -2,146 +2,152 @@ import java.util.Objects;
 import java.util.Scanner;
 
 public class Final {
-        static String[][] dosenAkun = {
-                { "Dosen1", "abcd" },
-                { "Dosen2", "efgh" }
-        };
+    static String[][] dosenAkun = {
+            { "Dosen1", "abcd" },
+            { "Dosen2", "efgh" }
+    };
 
-        static String[][] adminAkun = {
-                { "Admin1", "1111" },
-                { "Admin2", "0000" }
-        };
+    static String[][] adminAkun = {
+            { "Admin1", "1111" },
+            { "Admin2", "0000" }
+    };
 
-        static String[][] mahasiswaAkun = {
-                { "Adham", "7890" },
-                { "Ayleen", "1234" },
-                { "Marsya", "5678" },
-        };
+    static String[][] mahasiswaAkun = {
+            { "Adham", "7890" },
+            { "Ayleen", "1234" },
+            { "Marsya", "5678" },
+    };
 
-        static String[][] dataMahasiswa = {
-                { "Adham Baskara", "2341720199", "Teknologi Informasi", "D4 Teknik Informatika", "TI - 1G", "02", "", "", "", "", "", ""  },
-                { "Ayleen Ruhul Qisthy", "2341720012", "Teknologi Informasi", "D4 Teknik Informatika", "TI - 1G", "07", "", "", "", "", "", ""  },
-                { "Marsya Aurelia Sefira", "2341720011", "Teknologi Informasi", "D4 Teknik Informatika", "TI - 1G", "18", "", "", "", "", "", ""  }
-        };
+    static String[][] dataMahasiswa = {
+            { "Adham Baskara", "2341720199", "Teknologi Informasi", "D4 Teknik Informatika", "TI - 1G", "02", "", "",
+                    "", "", "", "" },
+            { "Ayleen Ruhul Qisthy", "2341720012", "Teknologi Informasi", "D4 Teknik Informatika", "TI - 1G", "07", "",
+                    "", "", "", "", "" },
+            { "Marsya Aurelia Sefira", "2341720011", "Teknologi Informasi", "D4 Teknik Informatika", "TI - 1G", "18",
+                    "", "", "", "", "", "" }
+    };
 
-        static String[][] riwayatTransaksi = new String[1][12];
+    static String[][] riwayatTransaksi = new String[1][12];
 
-        static String[][] kompen = {
+    static String[][] kompen = {
             {
-                "+=================================================================================+",
-                "[                              Kompensasi Mahasiswa                               ]",
-                "+=================================================================================+",
-                "| a. Kompensasi merupakan penggantian waktu yang dibebankan kepada mahasiswa atas |",
-                "|    ketidakhadirannya karena alpa.                                               |",
-                "| b. Kompensasi tidak menghapuskan jumlah ketidakhadiran                          |",
-                "| c. Bentuk dan pelaksanaan kompensasi diatur berazaskan pakta integritas oleh    |",
-                "|    jurusan berupa kegiatan yang berimplikasi terhadap peningkatan pengetahuan,  |",
-                "|    keterampilan, kedisiplinan, dan loyalitas almamater.                         |",
-                "| d. Besarnya kompensasi ditentukan berdasarkan jumlah jam alpa dikalikan dua.    |",
-                "| e. Kompensasi dilaksanakan setelah jam pelajaran resmi berakhir atau pada saat  |",
-                "|    liburan dan pelaksanaan serta bentuk kompensasi dan sanksi bagi yang tidak   |",
-                "|    melaksanakan kompensasi ditentukan oleh jurusan.                             |",
-                "| f. Penandatanganan persetujuan KRS tidak dapat diberikan oleh Dosen Pembina     |",
-                "|    Akademik (DPA) jika mahasiswa belum melaksanakan kompensasi semester         |",
-                "|    sebelumnya.                                                                  |",
-                "+=================================================================================+",
+                    "+=================================================================================+",
+                    "[                              Kompensasi Mahasiswa                               ]",
+                    "+=================================================================================+",
+                    "| a. Kompensasi merupakan penggantian waktu yang dibebankan kepada mahasiswa atas |",
+                    "|    ketidakhadirannya karena alpa.                                               |",
+                    "| b. Kompensasi tidak menghapuskan jumlah ketidakhadiran                          |",
+                    "| c. Bentuk dan pelaksanaan kompensasi diatur berazaskan pakta integritas oleh    |",
+                    "|    jurusan berupa kegiatan yang berimplikasi terhadap peningkatan pengetahuan,  |",
+                    "|    keterampilan, kedisiplinan, dan loyalitas almamater.                         |",
+                    "| d. Besarnya kompensasi ditentukan berdasarkan jumlah jam alpa dikalikan dua.    |",
+                    "| e. Kompensasi dilaksanakan setelah jam pelajaran resmi berakhir atau pada saat  |",
+                    "|    liburan dan pelaksanaan serta bentuk kompensasi dan sanksi bagi yang tidak   |",
+                    "|    melaksanakan kompensasi ditentukan oleh jurusan.                             |",
+                    "| f. Penandatanganan persetujuan KRS tidak dapat diberikan oleh Dosen Pembina     |",
+                    "|    Akademik (DPA) jika mahasiswa belum melaksanakan kompensasi semester         |",
+                    "|    sebelumnya.                                                                  |",
+                    "+=================================================================================+",
             }
-        };
-        
-        static String[][] pembayaranKompen = {
-          {
-                "+=================================================================================+",
-                "[                          Kategori Pembayaran Kompensasi                         ]",
-                "+=================================================================================+",
-                "| 1. Membantu Dosen                                                               |",
-                "| 2. Membersihkan Ruangan                                                         |",
-                "| 3. Membantu Panitia                                                             |",
-                "| 4. Menjadi relawan sebagai petugas damkar                                       |",
-                "| 5. Menjadi volunteer                                                            |",
-                "+=================================================================================+",
-                " "
-          }  
-        };
+    };
 
-        static String[][] tatib = {
+    static String[][] pembayaranKompen = {
             {
-                "+=================================================================================+",
-                "[                              Tata Tertib Mahasiswa                              ]",
-                "+=================================================================================+",
-                "| 1.  Terlibat dalam tindakan kriminal dan dinyatakan bersalah oleh |  Tingkat 1  |",
-                "|     Pengadilan                                                    |             |",
-                "| 2.  Mengedarkan serta menjual barang-barang psikotropika dan atau |  Tingkat 1  |",
-                "|     zat-zat Adiktif lainnya                                       |             |",
-                "| 3.  Menggunakan barang-barang psikotropika dan/ atau zat-zat      |  Tingkat 1  |",
-                "|     Adiktif lainnya                                               |             |",
-                "| 4.  Melakukan kegiatan atau sejenisnya yang dapat menurunkan      |  Tingkat 1  |",
-                "|     kehormatan atau martabat Negara, Bangsa dan Polinema.         |             |",
-                "| 5.  Melakukan plagiasi (copy paste) dalam tugas-tugas atau karya  | Tingkat 1/2 |",
-                "|     ilmiah                                                        |             |",
-                "| 6.  Melakukan pemalsuan data / dokumen / tanda tangan.            | Tingkat 1/2 |",
-                "| 7.  Melakukan pemerasan dan/atau penipuan.                        | Tingkat 1/2 |",
-                "| 8.  Melakukan kecurangan dalam bidang akademik, administratif,    | Tingkat 1/2 |",
-                "|     dan keuangan                                                  |             |",
-                "| 9.  Mengancam, baik tertulis atau tidak tertulis kepada mahasiswa |  Tingkat 2  |",
-                "|     dosen, dan/atau karyawan.                                     |             |",
-                "| 10. Melakukan tindakan kekerasan atau perkelahian di dalam        |  Tingkat 2  |",
-                "|     kampus.                                                       |             |",
-                "| 11. Membawa dan/atau menggunakan senjata tajam dan/atau senjata   |  Tingkat 2  |",
-                "|     api untuk hal kriminal                                        |             |",
-                "| 12. Melakukan pengotoran / pengrusakan barang milik orang lain    |  Tingkat 2  |",
-                "|     termasuk milik Politeknik Negeri Malang                       |             |",
-                "| 13. Bertingkah laku kasar atau tidak sopan kepada mahasiswa,      |  Tingkat 3  |",
-                "|     dosen, dan/atau karyawan.                                     |             |",
-                "| 14. Merokok di luar area kawasan merokok                          |  Tingkat 3  |",
-                "| 15. Melanggar peraturan/ ketentuan yang berlaku di Polinema baik  |  Tingkat 3  |",
-                "|     di Jurusan/ Program Studi                                     |             |",
-                "| 16. Makan atau minum di dalam ruang kuliah/ laboratorium/ bengkel |  Tingkat 4  |",
-                "| 17. Mahasiswa berambut dengan model punk, dicat selain hitam dan  |  Tingkat 4  |",
-                "|     atau skinned.                                                 |             |",
-                "| 18. Mahasiswa Iaki-laki berambut tidak rapi gondrong yaitu        |  Tingkat 4  |",
-                "|     panjang rambutnya melewati batas alis mata di bagian depan.   |             |",
-                "| 19. Berbusana tidak sopan dan tidak rapi, yaitu antara lain       |  Tingkat 4  |",
-                "|     adalah berpakaian ketat, transparan, memakai t-shirt.         |             |",
-                "| 20. Berkomunikasi dengan tidak sopan, baik tertulis atau tidak    |  Tingkat 5  |",
-                "|     tertulis kepada mahasiswa, dosen, karyawan, atau orang lain.  |             |",
-                "+=================================================================================+",
+                    "+=================================================================================+",
+                    "[                          Kategori Pembayaran Kompensasi                         ]",
+                    "+=================================================================================+",
+                    "| 1. Membantu Dosen                                                               |",
+                    "| 2. Membersihkan Ruangan                                                         |",
+                    "| 3. Membantu Panitia                                                             |",
+                    "| 4. Menjadi relawan sebagai petugas damkar                                       |",
+                    "| 5. Menjadi volunteer                                                            |",
+                    "+=================================================================================+",
+                    " "
             }
-        };
+    };
 
-        static String[][] pembayaranTatib = {
-          {
-                "+=================================================================================+",
-                "[                           Kategori Sanksi Pelanggaran                           ]",
-                "+=================================================================================+",
-                "| 1. Teguran lisan disertai surat pernyataan tidak mengulangi       |  Tingkat 5  |",
-                "|    perbuatan, dibubuhi materai, ditandatangani mahasiswa dan DPA  |             |",
-                "| 2. Teguran lisan disertai surat pernyataan tidak mengulangi       |  Tingkat 4  |",
-                "|    perbuatan, dibubuhi materai, ditandatangani mahasiswa dan DPA  |             |",
-                "| 3. Membuat surat pernyataan tidak mengulangi perbuatan tersebut   |  Tingkat 3  |",
-                "|    dibubuhi materai, ditandatangani mahasiswa dan DPA.            |             |",
-                "|    Melakukan tugas khusus, misalnya bertanggungjawab untuk        |             |",
-                "|    memperbaiki atau membersihkan kembali, dan tugas-tugas lainnya |             |",
-                "| 4. Dikenakan penggantian kerugian atau penggantian benda/barang,  |  Tingkat 2  |",
-                "|    Melakukan tugas layanan sosial dalam jangka waktu tertentu,    |             |",
-                "|    Diberikan nilai D pada mata kuliah terkait saat melakukan      |             |",
-                "|    pelanggaran.                                                   |             |",
-                "| 5. Dinonaktifkan (Cuti Akademik/ Terminal) selama dua semester,   |  Tingkat 1  |",
-                "|    Diberhentikan sebagai mahasiswa.                               |             |",
-                "+=================================================================================+",
-                " "
-          }  
-        };
+    static String[][] tatib = {
+            {
+                    "+=================================================================================+",
+                    "[                              Tata Tertib Mahasiswa                              ]",
+                    "+=================================================================================+",
+                    "| 1.  Terlibat dalam tindakan kriminal dan dinyatakan bersalah oleh |  Tingkat 1  |",
+                    "|     Pengadilan                                                    |             |",
+                    "| 2.  Mengedarkan serta menjual barang-barang psikotropika dan atau |  Tingkat 1  |",
+                    "|     zat-zat Adiktif lainnya                                       |             |",
+                    "| 3.  Menggunakan barang-barang psikotropika dan/ atau zat-zat      |  Tingkat 1  |",
+                    "|     Adiktif lainnya                                               |             |",
+                    "| 4.  Melakukan kegiatan atau sejenisnya yang dapat menurunkan      |  Tingkat 1  |",
+                    "|     kehormatan atau martabat Negara, Bangsa dan Polinema.         |             |",
+                    "| 5.  Melakukan plagiasi (copy paste) dalam tugas-tugas atau karya  | Tingkat 1/2 |",
+                    "|     ilmiah                                                        |             |",
+                    "| 6.  Melakukan pemalsuan data / dokumen / tanda tangan.            | Tingkat 1/2 |",
+                    "| 7.  Melakukan pemerasan dan/atau penipuan.                        | Tingkat 1/2 |",
+                    "| 8.  Melakukan kecurangan dalam bidang akademik, administratif,    | Tingkat 1/2 |",
+                    "|     dan keuangan                                                  |             |",
+                    "| 9.  Mengancam, baik tertulis atau tidak tertulis kepada mahasiswa |  Tingkat 2  |",
+                    "|     dosen, dan/atau karyawan.                                     |             |",
+                    "| 10. Melakukan tindakan kekerasan atau perkelahian di dalam        |  Tingkat 2  |",
+                    "|     kampus.                                                       |             |",
+                    "| 11. Membawa dan/atau menggunakan senjata tajam dan/atau senjata   |  Tingkat 2  |",
+                    "|     api untuk hal kriminal                                        |             |",
+                    "| 12. Melakukan pengotoran / pengrusakan barang milik orang lain    |  Tingkat 2  |",
+                    "|     termasuk milik Politeknik Negeri Malang                       |             |",
+                    "| 13. Bertingkah laku kasar atau tidak sopan kepada mahasiswa,      |  Tingkat 3  |",
+                    "|     dosen, dan/atau karyawan.                                     |             |",
+                    "| 14. Merokok di luar area kawasan merokok                          |  Tingkat 3  |",
+                    "| 15. Melanggar peraturan/ ketentuan yang berlaku di Polinema baik  |  Tingkat 3  |",
+                    "|     di Jurusan/ Program Studi                                     |             |",
+                    "| 16. Makan atau minum di dalam ruang kuliah/ laboratorium/ bengkel |  Tingkat 4  |",
+                    "| 17. Mahasiswa berambut dengan model punk, dicat selain hitam dan  |  Tingkat 4  |",
+                    "|     atau skinned.                                                 |             |",
+                    "| 18. Mahasiswa Iaki-laki berambut tidak rapi gondrong yaitu        |  Tingkat 4  |",
+                    "|     panjang rambutnya melewati batas alis mata di bagian depan.   |             |",
+                    "| 19. Berbusana tidak sopan dan tidak rapi, yaitu antara lain       |  Tingkat 4  |",
+                    "|     adalah berpakaian ketat, transparan, memakai t-shirt.         |             |",
+                    "| 20. Berkomunikasi dengan tidak sopan, baik tertulis atau tidak    |  Tingkat 5  |",
+                    "|     tertulis kepada mahasiswa, dosen, karyawan, atau orang lain.  |             |",
+                    "+=================================================================================+",
+            }
+    };
 
+    static String[][] pembayaranTatib = {
+            {
+                    "+=================================================================================+",
+                    "[                           Kategori Sanksi Pelanggaran                           ]",
+                    "+=================================================================================+",
+                    "| 1. Teguran lisan disertai surat pernyataan tidak mengulangi       |  Tingkat 5  |",
+                    "|    perbuatan, dibubuhi materai, ditandatangani mahasiswa dan DPA  |             |",
+                    "| 2. Teguran lisan disertai surat pernyataan tidak mengulangi       |  Tingkat 4  |",
+                    "|    perbuatan, dibubuhi materai, ditandatangani mahasiswa dan DPA  |             |",
+                    "| 3. Membuat surat pernyataan tidak mengulangi perbuatan tersebut   |  Tingkat 3  |",
+                    "|    dibubuhi materai, ditandatangani mahasiswa dan DPA.            |             |",
+                    "|    Melakukan tugas khusus, misalnya bertanggungjawab untuk        |             |",
+                    "|    memperbaiki atau membersihkan kembali, dan tugas-tugas lainnya |             |",
+                    "| 4. Dikenakan penggantian kerugian atau penggantian benda/barang,  |  Tingkat 2  |",
+                    "|    Melakukan tugas layanan sosial dalam jangka waktu tertentu,    |             |",
+                    "|    Diberikan nilai D pada mata kuliah terkait saat melakukan      |             |",
+                    "|    pelanggaran.                                                   |             |",
+                    "| 5. Dinonaktifkan (Cuti Akademik/ Terminal) selama dua semester,   |  Tingkat 1  |",
+                    "|    Diberhentikan sebagai mahasiswa.                               |             |",
+                    "+=================================================================================+",
+                    " "
+            }
+    };
+    static int indeksAkun =-1;
     public static void main(String[] args) {
         Scanner sc08 = new Scanner(System.in);
 
         boolean run = true, loginAdmin = false, loginMahasiswa = false, loginDosen = false, paswordSalah = false,
-                exitBoolean = false, logout = false, logoutDosen = false, logoutMahasiswa = false, logoutProgram = false, keluarKategori = false, keluarPelaporan = false, keluarTanggapan = false, keluarData = false, keluarDataDosen = false, keluarDataAdmin = false, keluarDataMahasiswa = false, keluarKompensasi = false, keluarKompensasiPembayaran = false;
+                exitBoolean = false, logout = false, logoutDosen = false, logoutMahasiswa = false,
+                logoutProgram = false, keluarKategori = false, keluarPelaporan = false, keluarTanggapan = false,
+                keluarData = false, keluarDataDosen = false, keluarDataAdmin = false, keluarDataMahasiswa = false,
+                keluarKompensasi = false, keluarKompensasiPembayaran = false;
         String feedbackDosen, exit, kompen;
         int poin = 0, jamAlfaK = 0, jamKompensasiK = 0, jatahKompen, jatahKompenSelesai;
-       
+
         do {
-             boolean iscont = true;
+            boolean iscont = true;
 
             System.out.println("============================================");
             System.out.println("[                  LOGIN                   ]");
@@ -193,6 +199,7 @@ public class Final {
                         if (inputpassword.equals(mahasiswaAkun[j][1])) {
                             loginMahasiswa = true;
                             paswordSalah = false;
+                            indeksAkun = j;
                             break;
                         } else {
                             loginMahasiswa = false;
@@ -291,19 +298,19 @@ public class Final {
                             jamKompensasiK = jamAlfaK * 2;
 
                             System.out.println("Jam Kompensasi anda: " + jamKompensasiK);
-                            // if (poinPelanggaran <= 0)
-                            //     System.out.println("Tidak ada pelanggaran ");
-                            // else if (poinPelanggaran <= 30 && poin != 0)
-                            //     System.out.println("Peringatan Pelanggaran Ringan Tingkat V ");
-                            // else if (poinPelanggaran > 30 && poin <= 40)
-                            //     System.out.println("Peringatan Pelanggaran Sedang Tingkat IV ");
-                            // else if (poinPelanggaran > 40 && poin <= 60)
-                            //     System.out.println("Peringatan Pelanggaran Cukup Berat Tingkat III");
-                            // else if (poinPelanggaran > 60 && poin <= 70)
-                            //     System.out.println("Peringatan Pelanggaran Berat Tingkat II");
-                            // else {
-                            //     System.out.println("Peringatan Pelanggaran Sangat Berat Tingkat I");
-                            // }
+                            if (poinPelanggaran <= 0)
+                            System.out.println("Tidak ada pelanggaran ");
+                            else if (poinPelanggaran <= 30 && poin != 0)
+                            System.out.println("Peringatan Pelanggaran Ringan Tingkat V ");
+                            else if (poinPelanggaran > 30 && poin <= 40)
+                            System.out.println("Peringatan Pelanggaran Sedang Tingkat IV ");
+                            else if (poinPelanggaran > 40 && poin <= 60)
+                            System.out.println("Peringatan Pelanggaran Cukup Berat Tingkat III");
+                            else if (poinPelanggaran > 60 && poin <= 70)
+                            System.out.println("Peringatan Pelanggaran Berat Tingkat II");
+                            else {
+                            System.out.println("Peringatan Pelanggaran Sangat Berat Tingkat I");
+                            }
                             System.out.print("Exit (true) : ");
                             exitBoolean = sc08.nextBoolean();
                             System.out.println();
@@ -421,13 +428,24 @@ public class Final {
                             System.out.println("[                   Manajemen Akun                    ]");
                             System.out.println("=======================================================");
                             System.out.println("      Apakah anda ingin mengedit info akun anda?      ");
+                            System.out.println("1. Ya");
+                            System.out.println("2. Tidak");
+                            System.out.println("=======================================================");
+                            System.out.print("Pilihan anda: ");
+                            menu = sc08.nextInt();
+                            if (menu == 1) {
+                                System.out.println("Ingin mengedit password anda?");
+                                mahasiswaAkun[indeksAkun][1] = sc08.next();
+                            } else if (menu == 2) {
+                                break;
+                            }
                             break;
                         case 9:
                             if (menu == 9) {
                                 System.out.println("Terimakasih telah menggunakan program ini!");
                                 System.out.println();
                                 exitBoolean = true;
-                                loginAdmin = false; 
+                                loginAdmin = false;
                                 break;
                             }
                     }
@@ -488,7 +506,6 @@ public class Final {
                             if (exitBoolean) {
                                 break;
                             }
-                            
 
                         case 2:
                             System.out.println("======================================================");
@@ -621,7 +638,7 @@ public class Final {
                                 System.out.println("Terimakasih telah menggunakan program ini!");
                                 System.out.println();
                                 exitBoolean = true;
-                                loginDosen = false; 
+                                loginDosen = false;
                                 break;
                             }
                     }
@@ -681,7 +698,7 @@ public class Final {
                                         break;
                                     case 3:
                                         System.out.println();
-                                        keluarKategori = true;                                        
+                                        keluarKategori = true;
                                         break;
                                     default:
                                         System.out.println();
@@ -707,7 +724,7 @@ public class Final {
                                 System.out.println("[ 4. Exit                                  ]");
 
                                 System.out.print("Pilih menu (1/2/3?) : ");
-                                int menuAdminData= sc08.nextInt();
+                                int menuAdminData = sc08.nextInt();
 
                                 switch (menuAdminData) {
                                     case 1:
@@ -722,7 +739,7 @@ public class Final {
                                             System.out.println("[ 4. Exit                                  ]");
 
                                             System.out.print("Pilih menu (1/2/3?) : ");
-                                            int menuAdminDataDosen= sc08.nextInt();
+                                            int menuAdminDataDosen = sc08.nextInt();
 
                                             switch (menuAdminDataDosen) {
                                                 case 1:
@@ -764,7 +781,7 @@ public class Final {
                                             System.out.println("[ 7. Exit                                  ]");
 
                                             System.out.print("Pilih menu (1/2/3?) : ");
-                                            int menuAdminDataMahasiswa= sc08.nextInt();
+                                            int menuAdminDataMahasiswa = sc08.nextInt();
 
                                             switch (menuAdminDataMahasiswa) {
                                                 case 1:
@@ -812,7 +829,7 @@ public class Final {
                                             System.out.println("[ 4. Exit                                  ]");
 
                                             System.out.print("Pilih menu (1/2/3?) : ");
-                                            int menuAdminDataAdmin= sc08.nextInt();
+                                            int menuAdminDataAdmin = sc08.nextInt();
 
                                             switch (menuAdminDataAdmin) {
                                                 case 1:
@@ -868,7 +885,7 @@ public class Final {
                                 System.out.println("[ 5. Exit                                  ]");
 
                                 System.out.print("Pilih menu (1/2/3?) : ");
-                                int menuAdminKompensasi= sc08.nextInt();
+                                int menuAdminKompensasi = sc08.nextInt();
 
                                 switch (menuAdminKompensasi) {
                                     case 1:
@@ -916,7 +933,7 @@ public class Final {
                                 System.out.println("Terimakasih telah menggunakan program ini!");
                                 System.out.println();
                                 exitBoolean = true;
-                                loginAdmin = false; 
+                                loginAdmin = false;
                                 break;
                             }
                         default:
@@ -928,29 +945,28 @@ public class Final {
                             break;
                     }
                 } while (exitBoolean != true);
-            } 
-            else {
+            } else {
                 System.out.println("Username Salah!");
             }
         } while ((logoutProgram != true));
     }
-    
 
-    
     public static void tampilkanAkunDosen() {
         System.out.println("============================================");
         System.out.println("[         Tampilkan Akun Dosen             ]");
         System.out.println("============================================");
-    
+
         for (String[] dosen : dosenAkun) {
             displayAkunDosen(dosen);
         }
     }
+
     public static void displayAkunDosen(String[] dosen) {
         System.out.println("============================================");
         System.out.println("[ Username: " + dosen[0] + "              ");
         System.out.println("[ Password: " + dosen[1] + "              ");
     }
+
     public static void ubahAkunDosen(Scanner scanner) {
         System.out.print("Masukkan username Dosen yang ingin diubah: ");
         String username = scanner.next();
@@ -970,6 +986,7 @@ public class Final {
             System.out.println("Username Dosen tidak ditemukan.");
         }
     }
+
     public static void tambahkanAkunDosen(Scanner scanner) {
         System.out.print("Masukkan username Dosen baru: ");
         String newUsername = scanner.next();
@@ -981,6 +998,7 @@ public class Final {
 
         System.out.println("Data Dosen baru berhasil ditambahkan.");
     }
+
     public static String[][] concatArraysDosen(String[][] arr1, String[][] arr2) {
         int len1 = arr1.length;
         int len2 = arr2.length;
@@ -991,21 +1009,23 @@ public class Final {
 
         return result;
     }
+
     public static void tampilkanAkunAdmin() {
         System.out.println("============================================");
         System.out.println("[         Tampilkan Akun Admin             ]");
         System.out.println("============================================");
-    
+
         for (String[] admin : adminAkun) {
             displayAkunAdmin(admin);
         }
     }
+
     public static void displayAkunAdmin(String[] admin) {
         System.out.println("============================================");
         System.out.println("[ Username: " + admin[0] + "              ");
         System.out.println("[ Password: " + admin[1] + "              ");
     }
-    
+
     public static void ubahAkunAdmin(Scanner scanner) {
         System.out.print("Masukkan username Admin yang ingin diubah: ");
         String username = scanner.next();
@@ -1025,6 +1045,7 @@ public class Final {
             System.out.println("Username Admin tidak ditemukan.");
         }
     }
+
     public static void tambahkanAkunAdmin(Scanner scanner) {
         System.out.print("Masukkan username Admin baru: ");
         String newUsername = scanner.next();
@@ -1036,6 +1057,7 @@ public class Final {
 
         System.out.println("Data Admin baru berhasil ditambahkan.");
     }
+
     public static String[][] concatArraysAdmin(String[][] arr1, String[][] arr2) {
         int len1 = arr1.length;
         int len2 = arr2.length;
@@ -1046,6 +1068,7 @@ public class Final {
 
         return result;
     }
+
     public static void ubahAkunMahasiswa(Scanner scanner) {
         System.out.print("Masukkan username Mahasiswa yang ingin diubah: ");
         String username = scanner.next();
@@ -1065,6 +1088,7 @@ public class Final {
             System.out.println("Username Mahasiswa tidak ditemukan.");
         }
     }
+
     public static void tambahkanAkunMahasiswa(Scanner scanner) {
         System.out.print("Masukkan username Mahasiswa baru: ");
         String newUsername = scanner.next();
@@ -1076,6 +1100,7 @@ public class Final {
 
         System.out.println("Akun Mahasiswa baru berhasil ditambahkan.");
     }
+
     public static String[][] concatArraysMahasiswa(String[][] arr1, String[][] arr2) {
         int len1 = arr1.length;
         int len2 = arr2.length;
@@ -1086,6 +1111,7 @@ public class Final {
 
         return result;
     }
+
     public static void ubahDataMahasiswa(Scanner scanner) {
         System.out.print("Masukkan NIM Mahasiswa yang ingin diubah : ");
         String nim = scanner.next();
@@ -1125,6 +1151,7 @@ public class Final {
             System.out.println("NIM Mahasiswa tidak ditemukan.");
         }
     }
+
     public static void tambahkanDataMahasiswa(Scanner scanner) {
         System.out.print("Masukkan NIM Mahasiswa baru: ");
         String nimBaru = scanner.nextLine();
@@ -1162,6 +1189,7 @@ public class Final {
             System.out.println("Data Mahasiswa baru berhasil ditambahkan.");
         }
     }
+
     public static void tampilkanDataMahasiswa() {
         System.out.println("============================================");
         for (String[] mahasiswa : dataMahasiswa) {
@@ -1169,6 +1197,7 @@ public class Final {
             System.out.println("============================================");
         }
     }
+
     public static void displayDataMahasiswa(String[] mahasiswa) {
         System.out.println("============================================");
         System.out.println("[ Nama: " + mahasiswa[0] + "              ");
@@ -1178,20 +1207,23 @@ public class Final {
         System.out.println("[ Kelas: " + mahasiswa[4] + "             ");
         System.out.println("[ Nomor Absen: " + mahasiswa[5] + "       ");
     }
+
     public static void tampilkanAkunMahasiswa() {
         System.out.println("============================================");
         System.out.println("[         Tampilkan Akun Mahasiswa          ]");
         System.out.println("============================================");
-    
+
         for (String[] mahasiswa : mahasiswaAkun) {
             displayAkunMahasiswa(mahasiswa);
         }
-    } 
+    }
+
     public static void displayAkunMahasiswa(String[] mahasiswa) {
         System.out.println("============================================");
         System.out.println("[ Nama: " + mahasiswa[0] + "              ");
         System.out.println("[ Password: " + mahasiswa[1] + "          ");
-    }  
+    }
+
     public static String[][] concatArrays(String[][] arr1, String[][] arr2) {
         int len1 = arr1.length;
         int len2 = arr2.length;
@@ -1202,8 +1234,9 @@ public class Final {
 
         return result;
     }
+
     public static void tambahkanPembayaranKompen(Scanner sc08) {
-         boolean keluarKompensasiPembayaran = false;
+        boolean keluarKompensasiPembayaran = false;
         do {
             System.out.println("============================================");
             System.out.println("[          Pembayaran Kompensasi           ]");
@@ -1244,7 +1277,7 @@ public class Final {
 
                         if (input.equalsIgnoreCase("sudah")) {
                             String sudah = "Sudah Menyelesaikan Kompen";
-                            String[] inputPembayaranKompen = {sudah};
+                            String[] inputPembayaranKompen = { sudah };
                             updateArray(dataMahasiswa, selectedMahasiswa - 1, inputPembayaranKompen);
                             System.out.println("Pembayaran Sanksi Tata tertib telah di perbarui!");
                         } else {
@@ -1254,10 +1287,11 @@ public class Final {
                     default:
                         System.out.println("Input Anda tidak valid!");
                         break;
-                }        
-            } 
+                }
+            }
         } while (!keluarKompensasiPembayaran);
     }
+
     private static void updateArray(String[][] array, int rowIndex, String[] newData) {
         String[][] tempArray = new String[array.length][array[rowIndex].length + newData.length]; //
         String[][] tempArray2 = new String[riwayatTransaksi.length + 1][riwayatTransaksi[0].length]; //
@@ -1272,7 +1306,7 @@ public class Final {
                 tempArray2[i][j] = riwayatTransaksi[i][j]; //
             }
         }
-        for (int index = 0; index < array.length; index++) {  //
+        for (int index = 0; index < array.length; index++) { //
             if (index == rowIndex) {
                 for (int j = 0; j <= 5; j++) {
                     tempArray2[riwayatTransaksi.length][j] = array[index][j];
@@ -1285,6 +1319,7 @@ public class Final {
         dataMahasiswa = tempArray;
         riwayatTransaksi = tempArray2; //
     }
+
     public static String[] inputKategoriKompen(Scanner scanner, int pilihan) {
         String[] kategori = null;
         switch (pilihan) {
@@ -1306,11 +1341,11 @@ public class Final {
         }
         return kategori;
     }
+
     private static void tampilkanData() {
         System.out.println("+=================================================================================+");
         System.out.println("[                                 Data Mahasiswa                                  ]");
         System.out.println("+=================================================================================+");
-        
 
         for (int i = 0; i < dataMahasiswa.length; i++) {
             String[] mahasiswa = dataMahasiswa[i];
@@ -1326,18 +1361,18 @@ public class Final {
             System.out.println("| Total Jam Kompensasi     : " + mahasiswa[8]);
             System.out.println("| Kategori Kompen          : " + mahasiswa[6]);
             System.out.println("| Pelanggaran Tata Tertib  : " + mahasiswa[9]);
-            System.out.println("| Kategori Sanksi          : " + mahasiswa[7]);            
+            System.out.println("| Kategori Sanksi          : " + mahasiswa[7]);
             System.out.println("| Feedback / Tanggapan     : " + mahasiswa[11]);
 
             System.out.println("+=================================================================================+");
-            
+
         }
     }
+
     private static void tampilkanRiwayat() {
         System.out.println("+=================================================================================+");
         System.out.println("[                                 Data Mahasiswa                                  ]");
         System.out.println("+=================================================================================+");
-        
 
         for (int i = 1; i < riwayatTransaksi.length; i++) {
             String[] mahasiswa = riwayatTransaksi[i];
@@ -1356,10 +1391,10 @@ public class Final {
             System.out.println("| Total Jam Kompensasi     : " + Objects.toString(mahasiswa[8], ""));
             System.out.println("| Feedback / Tanggapan     : " + Objects.toString(mahasiswa[11], ""));
 
-            System.out.println("+=================================================================================+");   
+            System.out.println("+=================================================================================+");
         }
     }
-    
+
     public static void tampilkanKompen() {
         for (int i = 0; i < kompen.length; i++) {
             for (int j = 0; j < kompen[i].length; j++) {
@@ -1367,6 +1402,7 @@ public class Final {
             }
         }
     }
+
     public static void tampilkanTatib() {
         for (int i = 0; i < tatib.length; i++) {
             for (int j = 0; j < tatib[i].length; j++) {
@@ -1374,6 +1410,7 @@ public class Final {
             }
         }
     }
+
     public static void tampilkanPembayaranKompen() {
         for (int i = 0; i < pembayaranKompen.length; i++) {
             for (int j = 0; j < pembayaranKompen[i].length; j++) {
@@ -1381,6 +1418,7 @@ public class Final {
             }
         }
     }
+
     public static void tampilkanPembayaranTatib() {
         for (int i = 0; i < pembayaranTatib.length; i++) {
             for (int j = 0; j < pembayaranTatib[i].length; j++) {
@@ -1388,8 +1426,9 @@ public class Final {
             }
         }
     }
+
     public static void tambahkanPembayaranTatib(Scanner sc08) {
-         boolean keluarTatibPembayaran = false;
+        boolean keluarTatibPembayaran = false;
         do {
             System.out.println("============================================");
             System.out.println("[             Pembayaran Sanksi            ]");
@@ -1424,13 +1463,13 @@ public class Final {
                             System.out.println("Pilihan yang Anda masukkan tidak valid.");
                         }
                         break;
-                    case "tidak" :
+                    case "tidak":
                         System.out.print("Apakah sudah menyelesaikan Sanksi tatib (sudah/belum)? : ");
                         String input = sc08.next();
 
                         if (input.equalsIgnoreCase("sudah")) {
                             String sudah = "Sudah Menyelesaikan Sanksi";
-                            String[] inputPembayaranSanksi = {sudah};
+                            String[] inputPembayaranSanksi = { sudah };
                             updateArraytatib(dataMahasiswa, selectedMahasiswa - 1, inputPembayaranSanksi);
                             System.out.println("Pembayaran Sanksi Tata tertib telah di perbarui!");
                         } else {
@@ -1441,13 +1480,14 @@ public class Final {
                         System.out.println("Input Anda tidak valid!");
                         break;
                 }
-            } 
+            }
         } while (!keluarTatibPembayaran);
     }
+
     private static void updateArraytatib(String[][] array, int rowIndex, String[] newData) {
         String[][] tempArray = new String[array.length][array[rowIndex].length + newData.length]; //
         String[][] tempArray2 = new String[riwayatTransaksi.length + 1][riwayatTransaksi[0].length]; //
-        
+
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
                 tempArray[i][j] = array[i][j];
@@ -1458,7 +1498,7 @@ public class Final {
                 tempArray2[i][j] = riwayatTransaksi[i][j]; //
             }
         }
-        for (int index = 0; index < array.length; index++) {  //
+        for (int index = 0; index < array.length; index++) { //
             if (index == rowIndex) {
                 for (int j = 0; j <= 5; j++) {
                     tempArray2[riwayatTransaksi.length][j] = array[index][j];
@@ -1471,32 +1511,33 @@ public class Final {
         dataMahasiswa = tempArray;
         riwayatTransaksi = tempArray2; //
     }
+
     public static String[] inputSanksiTatib(Scanner scanner, int pilihan) {
         String[] kategori = null;
         switch (pilihan) {
             case 1:
                 kategori = new String[] { "Teguran lisan disertai surat pernyataan tidak mengulangi\n" +
-                "                             perbuatan, dibubuhi materai, ditandatangani mahasiswa dan DPA" };
+                        "                             perbuatan, dibubuhi materai, ditandatangani mahasiswa dan DPA" };
                 break;
             case 2:
                 kategori = new String[] { "Teguran lisan disertai surat pernyataan tidak mengulangi\n" +
-                "                             perbuatan, dibubuhi materai, ditandatangani mahasiswa dan DPA" };
+                        "                             perbuatan, dibubuhi materai, ditandatangani mahasiswa dan DPA" };
                 break;
             case 3:
                 kategori = new String[] { "Membuat surat pernyataan tidak mengulangi perbuatan tersebut\n" +
-                "                             dibubuhi materai, ditandatangani mahasiswa dan DPA.\n" +
-                "                             Melakukan tugas khusus, misalnya bertanggung jawab untuk.\n" +
-                "                             Memperbaiki atau membersihkan kembali, dan tugas-tugas lainnya" };
+                        "                             dibubuhi materai, ditandatangani mahasiswa dan DPA.\n" +
+                        "                             Melakukan tugas khusus, misalnya bertanggung jawab untuk.\n" +
+                        "                             Memperbaiki atau membersihkan kembali, dan tugas-tugas lainnya" };
                 break;
             case 4:
                 kategori = new String[] { "Dikenakan penggantian kerugian atau penggantian benda/barang. \n" +
-                "                             Melakukan tugas layanan sosial dalam jangka waktu tertentu.\n" +
-                "                             Diberikan nilai D pada mata kuliah terkait saat melakukan\n" +
-                "                             pelanggaran." };
+                        "                             Melakukan tugas layanan sosial dalam jangka waktu tertentu.\n" +
+                        "                             Diberikan nilai D pada mata kuliah terkait saat melakukan\n" +
+                        "                             pelanggaran." };
                 break;
             case 5:
                 kategori = new String[] { "Dinonaktifkan (Cuti Akademik/ Terminal) selama dua semester.\n" +
-                "                             Atau diberhentikan sebagai mahasiswa." };
+                        "                             Atau diberhentikan sebagai mahasiswa." };
                 break;
         }
         return kategori;
@@ -1529,18 +1570,19 @@ public class Final {
 
                 int jamKompensasiK = jamAlfaK * 2;
 
-                String[] inputJamAlpha = {String.valueOf(jamAlfaK)};
+                String[] inputJamAlpha = { String.valueOf(jamAlfaK) };
                 updateArrayAlpha(dataMahasiswa, selectedMahasiswa - 1, inputJamAlpha);
 
-                String[] inputSisaJamAlpha = {String.valueOf(jamKompensasiK)};
+                String[] inputSisaJamAlpha = { String.valueOf(jamKompensasiK) };
                 updateArraySisaAlpha(dataMahasiswa, selectedMahasiswa - 1, inputSisaJamAlpha);
             }
         } while (!keluar);
     }
+
     private static void updateArrayAlpha(String[][] array, int rowIndex, String[] newData) {
         String[][] tempArray = new String[array.length][array[rowIndex].length + newData.length]; //
         String[][] tempArray2 = new String[riwayatTransaksi.length + 1][riwayatTransaksi[0].length]; //
-        
+
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
                 tempArray[i][j] = array[i][j];
@@ -1551,7 +1593,7 @@ public class Final {
                 tempArray2[i][j] = riwayatTransaksi[i][j]; //
             }
         }
-        for (int index = 0; index < array.length; index++) {  //
+        for (int index = 0; index < array.length; index++) { //
             if (index == rowIndex) {
                 for (int j = 0; j <= 5; j++) {
                     tempArray2[riwayatTransaksi.length][j] = array[index][j];
@@ -1563,7 +1605,8 @@ public class Final {
         tempArray2[riwayatTransaksi.length][10] = newData[0]; //
         dataMahasiswa = tempArray;
         riwayatTransaksi = tempArray2;
-     }
+    }
+
     public static void daftarKompensasiMahasiswa(Scanner sc08) {
         boolean keluar = false;
         do {
@@ -1590,20 +1633,22 @@ public class Final {
                 if (selesaiJamAlfaK <= jatahKompen) {
                     jatahKompen -= selesaiJamAlfaK;
                     System.out.println();
-                    // System.out.println("Sisa jam kompen yang belum diselesaikan: " + jatahKompen);
+                    // System.out.println("Sisa jam kompen yang belum diselesaikan: " +
+                    // jatahKompen);
                 } else {
                     System.out.println("Input Anda tidak valid!");
                 }
 
-                String[] inputJamAlpha = {String.valueOf(jatahKompen)};
+                String[] inputJamAlpha = { String.valueOf(jatahKompen) };
                 updateArraySisaAlpha(dataMahasiswa, selectedMahasiswa - 1, inputJamAlpha);
             }
         } while (!keluar);
     }
+
     private static void updateArraySisaAlpha(String[][] array, int rowIndex, String[] newData) {
         String[][] tempArray = new String[array.length][array[rowIndex].length + newData.length]; //
         String[][] tempArray2 = new String[riwayatTransaksi.length + 1][riwayatTransaksi[0].length]; //
-        
+
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
                 tempArray[i][j] = array[i][j];
@@ -1614,7 +1659,7 @@ public class Final {
                 tempArray2[i][j] = riwayatTransaksi[i][j];
             }
         }
-        for (int index = 0; index < array.length; index++) { 
+        for (int index = 0; index < array.length; index++) {
             if (index == rowIndex) {
                 for (int j = 0; j <= 5; j++) {
                     tempArray2[riwayatTransaksi.length][j] = array[index][j];
@@ -1626,10 +1671,10 @@ public class Final {
         tempArray2[riwayatTransaksi.length][8] = newData[0];
         dataMahasiswa = tempArray;
         riwayatTransaksi = tempArray2;
-    } 
-    
+    }
+
     public static void laporPelanggaran(Scanner sc08) {
-         boolean keluar = false;
+        boolean keluar = false;
         do {
             System.out.println("============================================");
             System.out.println("[           Pelaporan Pelanggaran          ]");
@@ -1670,9 +1715,9 @@ public class Final {
 
                         if (input.equalsIgnoreCase("ya")) {
                             String ya = " ";
-                            String[] inputLapor = {ya};
+                            String[] inputLapor = { ya };
                             updateArrayLapor(dataMahasiswa, selectedMahasiswa - 1, inputLapor);
-                            System.out.println("Laporan pelanggaran tata tertib telah di perbarui!");                           
+                            System.out.println("Laporan pelanggaran tata tertib telah di perbarui!");
                         } else {
                             continue;
                         }
@@ -1680,10 +1725,11 @@ public class Final {
                     default:
                         System.out.println("Input Anda tidak valid!");
                         break;
-                }        
-            } 
+                }
+            }
         } while (!keluar);
     }
+
     private static void updateArrayLapor(String[][] array, int rowIndex, String[] newData) {
         String[][] tempArray = new String[array.length][array[rowIndex].length + newData.length];
         String[][] tempArray2 = new String[riwayatTransaksi.length + 1][riwayatTransaksi[0].length];
@@ -1698,7 +1744,7 @@ public class Final {
                 tempArray2[i][j] = riwayatTransaksi[i][j]; //
             }
         }
-        for (int index = 0; index < array.length; index++) {  //
+        for (int index = 0; index < array.length; index++) { //
             if (index == rowIndex) {
                 for (int j = 0; j <= 5; j++) {
                     tempArray2[riwayatTransaksi.length][j] = array[index][j];
@@ -1711,28 +1757,29 @@ public class Final {
         dataMahasiswa = tempArray;
         riwayatTransaksi = tempArray2;
     }
+
     public static String[] inputKategoriTatib(Scanner scanner, int pilihan) {
         String[] kategori = null;
         switch (pilihan) {
             case 1:
                 kategori = new String[] { "Terlibat dalam tindakan kriminal dan dinyatakan bersalah oleh\n" +
-                "                             Pengadilan" };
+                        "                             Pengadilan" };
                 break;
             case 2:
                 kategori = new String[] { "Mengedarkan serta menjual barang-barang psikotropika dan atau\n" +
-                "                             zat-zat Adiktif lainnya" };
+                        "                             zat-zat Adiktif lainnya" };
                 break;
             case 3:
                 kategori = new String[] { "Menggunakan barang-barang psikotropika dan/ atau zat-zat\n" +
-                "                             Adiktif lainnya" };
+                        "                             Adiktif lainnya" };
                 break;
             case 4:
                 kategori = new String[] { "Melakukan kegiatan atau sejenisnya yang dapat menurunkan \n" +
-                "                             kehormatan atau martabat Negara, Bangsa dan Polinema." };
+                        "                             kehormatan atau martabat Negara, Bangsa dan Polinema." };
                 break;
             case 5:
                 kategori = new String[] { "Melakukan plagiasi (copy paste) dalam tugas-tugas atau karya\n" +
-                "                             ilmiah" };
+                        "                             ilmiah" };
                 break;
             case 6:
                 kategori = new String[] { "Melakukan pemalsuan data / dokumen / tanda tangan." };
@@ -1742,59 +1789,60 @@ public class Final {
                 break;
             case 8:
                 kategori = new String[] { "Melakukan kecurangan dalam bidang akademik, administratif,\n" +
-                "                             dan keuangan" };
+                        "                             dan keuangan" };
                 break;
             case 9:
                 kategori = new String[] { "Mengancam, baik tertulis atau tidak tertulis kepada mahasiswa \n" +
-                "                             dosen, dan/atau karyawan." };
+                        "                             dosen, dan/atau karyawan." };
                 break;
             case 10:
                 kategori = new String[] { "Melakukan tindakan kekerasan atau perkelahian di dalam \n" +
-                "                             kampus." };
+                        "                             kampus." };
                 break;
             case 11:
                 kategori = new String[] { "Membawa dan/atau menggunakan senjata tajam dan/atau senjata\n" +
-                "                             api untuk hal kriminal." };
+                        "                             api untuk hal kriminal." };
                 break;
             case 12:
                 kategori = new String[] { "Melakukan pengotoran / pengrusakan barang milik orang lain\n" +
-                "                             termasuk milik Politeknik Negeri Malang" };
+                        "                             termasuk milik Politeknik Negeri Malang" };
                 break;
             case 13:
                 kategori = new String[] { "Bertingkah laku kasar atau tidak sopan kepada mahasiswa,\n" +
-                "                             dosen, dan/atau karyawan." };
+                        "                             dosen, dan/atau karyawan." };
                 break;
             case 14:
                 kategori = new String[] { "Merokok di luar area kawasan merokok." };
                 break;
             case 15:
                 kategori = new String[] { "Melanggar peraturan/ ketentuan yang berlaku di Polinema baik\n" +
-                "                             di Jurusan/ Program Studi." };
+                        "                             di Jurusan/ Program Studi." };
                 break;
             case 16:
                 kategori = new String[] { "Makan atau minum di dalam ruang kuliah/ laboratorium/ bengkel" };
                 break;
             case 17:
                 kategori = new String[] { "Mahasiswa berambut dengan model punk, dicat selain hitam dan\n" +
-                "                             atau skinned." };
+                        "                             atau skinned." };
                 break;
             case 18:
                 kategori = new String[] { "Mahasiswa Iaki-laki berambut tidak rapi gondrong yaitu\n" +
-                "                             panjang rambutnya melewati batas alis mata di bagian depan." };
+                        "                             panjang rambutnya melewati batas alis mata di bagian depan." };
                 break;
             case 19:
                 kategori = new String[] { "Berbusana tidak sopan dan tidak rapi, yaitu antara lain\n" +
-                "                             adalah berpakaian ketat, transparan, memakai t-shirt." };
+                        "                             adalah berpakaian ketat, transparan, memakai t-shirt." };
                 break;
             case 20:
                 kategori = new String[] { "Berkomunikasi dengan tidak sopan, baik tertulis atau tidak\n" +
-                "                             tertulis kepada mahasiswa, dosen, karyawan, atau orang lain. " };
+                        "                             tertulis kepada mahasiswa, dosen, karyawan, atau orang lain. " };
                 break;
         }
         return kategori;
     }
+
     public static void feedback(Scanner sc08) {
-         boolean keluar = false;
+        boolean keluar = false;
         do {
             System.out.println("============================================");
             System.out.println("[           Feedback / Tanggapan          ]");
@@ -1815,38 +1863,39 @@ public class Final {
                 String inputFeedback = sc08.next();
 
                 // switch (inputFeedback) {
-                //     case "ya":
-                //         System.out.print("Feedback / tanggapan :  ");
-                //         String feedback = sc08.next();
+                // case "ya":
+                // System.out.print("Feedback / tanggapan : ");
+                // String feedback = sc08.next();
 
-                //         String[] inputTanggapan = {feedback};
-                //         updateArrayTanggapan(dataMahasiswa, selectedMahasiswa - 1, inputTanggapan);
+                // String[] inputTanggapan = {feedback};
+                // updateArrayTanggapan(dataMahasiswa, selectedMahasiswa - 1, inputTanggapan);
 
-                //         System.out.println("Feedback / Tanggapan berhasil ditambahkan!");
-                //         break;
-                //     case "tidak":
-                //         System.out.print("Apakah ingin menghapus Feedback / Tanggapan (ya/tidak)? : ");
-                //         String input = sc08.next();
+                // System.out.println("Feedback / Tanggapan berhasil ditambahkan!");
+                // break;
+                // case "tidak":
+                // System.out.print("Apakah ingin menghapus Feedback / Tanggapan (ya/tidak)? :
+                // ");
+                // String input = sc08.next();
 
-                //         if (input.equalsIgnoreCase("ya")) {
-                //             String ya = " ";
-                //             String[] inputTanggapan = {ya};
-                //             updateArrayTanggapan(dataMahasiswa, selectedMahasiswa - 1, inputTanggapan);
-                //             System.out.println("Feedback / Tanggapan telah di perbarui!");
-                //         } else {
-                //             continue;
-                //         }
-                //         break;
-                //     default:
-                //         System.out.println("Input Anda tidak valid!");
-                //         break;
+                // if (input.equalsIgnoreCase("ya")) {
+                // String ya = " ";
+                // String[] inputTanggapan = {ya};
+                // updateArrayTanggapan(dataMahasiswa, selectedMahasiswa - 1, inputTanggapan);
+                // System.out.println("Feedback / Tanggapan telah di perbarui!");
+                // } else {
+                // continue;
+                // }
+                // break;
+                // default:
+                // System.out.println("Input Anda tidak valid!");
+                // break;
                 // }
 
                 if (inputFeedback.equalsIgnoreCase("ya")) {
                     System.out.print("Feedback / tanggapan :  ");
                     String feedback = sc08.next();
 
-                    String[] inputTanggapan = {feedback};
+                    String[] inputTanggapan = { feedback };
                     updateArrayTanggapan(dataMahasiswa, selectedMahasiswa - 1, inputTanggapan);
 
                     System.out.println("Feedback / Tanggapan berhasil ditambahkan!");
@@ -1857,7 +1906,7 @@ public class Final {
 
                     if (input.equalsIgnoreCase("ya")) {
                         String ya = " ";
-                        String[] inputTanggapan = {ya};
+                        String[] inputTanggapan = { ya };
                         updateArrayTanggapan(dataMahasiswa, selectedMahasiswa - 1, inputTanggapan);
                         System.out.println("Feedback / Tanggapan telah di perbarui!");
                     } else {
@@ -1868,13 +1917,14 @@ public class Final {
                     System.out.println("Input Anda tidak valid!");
                     break;
                 }
-            } 
+            }
         } while (!keluar);
     }
+
     private static void updateArrayTanggapan(String[][] array, int rowIndex, String[] newData) {
         String[][] tempArray = new String[array.length][array[rowIndex].length + newData.length]; //
         String[][] tempArray2 = new String[riwayatTransaksi.length + 1][riwayatTransaksi[0].length]; //
-        
+
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
                 tempArray[i][j] = array[i][j];
@@ -1885,7 +1935,7 @@ public class Final {
                 tempArray2[i][j] = riwayatTransaksi[i][j];
             }
         }
-        for (int index = 0; index < array.length; index++) { 
+        for (int index = 0; index < array.length; index++) {
             if (index == rowIndex) {
                 for (int j = 0; j <= 5; j++) {
                     tempArray2[riwayatTransaksi.length][j] = array[index][j];
