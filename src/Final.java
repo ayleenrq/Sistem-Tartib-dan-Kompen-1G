@@ -207,7 +207,7 @@ public class Final {
                         }
                     } else {
                         loginMahasiswa = false;
-                    }
+                    } 
                 }
             } else if (login == 3) {
                 for (int k = 0; k < dosenAkun.length; k++) {
@@ -230,7 +230,9 @@ public class Final {
 
             if (paswordSalah) {
                 System.out.println("Password Salah");
-            } else if (loginMahasiswa) {
+            }
+
+            if (loginMahasiswa) {
                 System.out.println("Berhasil Login Sebagai Mahasiswa!");
                 System.out.println();
 
@@ -257,12 +259,6 @@ public class Final {
                             tampilkanPembayaranTatib();
                             tampilkanKompen();
                             tampilkanPembayaranKompen();
-                            System.out.print("Exit (true) : ");
-                            exitBoolean = sc08.nextBoolean();
-                            System.out.println();
-                            if (exitBoolean) {
-                                break;
-                            }
                             break;
                         case 2:
                             for (int i = 0; i < dataMahasiswa.length; i++) {
@@ -1113,22 +1109,20 @@ public class Final {
     }
 
     public static void ubahDataMahasiswa(Scanner scanner) {
-        System.out.print("Masukkan NIM Mahasiswa yang ingin diubah : ");
-        int nimBaru = scanner.nextInt();
-        String nim = String.valueOf(nimBaru);
+        System.out.println("Masukkan Nama Mahasiswa yang ingin diubah : ");
+        scanner.nextLine();
+        String nama = scanner.nextLine();
 
         boolean found = false;
         for (String[] mahasiswa : dataMahasiswa) {
-            if (nim.equals(mahasiswa[1])) {
+            if (nama.equalsIgnoreCase(mahasiswa[0])) {
                 found = true;
 
                 System.out.println("Data Mahasiswa sebelum diubah:");
                 displayDataMahasiswa(mahasiswa);
 
-                System.out.print("Masukkan Nama baru: ");
-                mahasiswa[0] = scanner.nextLine();
-
-                scanner.nextLine();
+                System.out.print("Masukkan NIM baru: ");
+                mahasiswa[1] = scanner.nextLine();
 
                 System.out.print("Masukkan Prodi baru: ");
                 mahasiswa[2] = scanner.nextLine();
@@ -1151,7 +1145,7 @@ public class Final {
             }
         }
         if (!found) {
-            System.out.println("NIM Mahasiswa tidak ditemukan.");
+            System.out.println("Nama Mahasiswa tidak ditemukan.");
         }
     }
 
@@ -1171,7 +1165,7 @@ public class Final {
             }
         }
         if (!found) {
-            String[] newMahasiswa = new String[6];
+            String[] newMahasiswa = new String[12];
             newMahasiswa[1] = nimBaru;
 
             System.out.print("Masukkan Nama Mahasiswa: ");
@@ -1897,8 +1891,8 @@ public class Final {
                 // }
 
                 if (inputFeedback.equalsIgnoreCase("ya")) {
-                    System.out.print("Feedback / tanggapan :  ");
-                    String feedback = sc08.next();
+                    System.out.print("Feedback / tanggapan : ");
+                    String feedback = sc08.nextLine();
 
                     String[] inputTanggapan = { feedback };
                     updateArrayTanggapan(dataMahasiswa, selectedMahasiswa - 1, inputTanggapan);
