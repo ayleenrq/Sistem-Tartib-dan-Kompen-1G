@@ -255,8 +255,6 @@ public class Final {
                         case 1:
                             tampilkanTatib();
                             tampilkanPembayaranTatib();
-                            tampilkanKompen();
-                            tampilkanPembayaranKompen();
                             System.out.print("Exit (true) : ");
                             exitBoolean = sc08.nextBoolean();
                             System.out.println();
@@ -287,36 +285,8 @@ public class Final {
                             }
                             break;
                         case 3:
-                            System.out.println("======================================================");
-                            System.out.println("[                    Kompensasi                      ]");
-                            System.out.println("======================================================");
-                            System.out.print("Masukkan jam alfa  : ");
-                            jamAlfaK = sc08.nextInt();
-                            System.out.print("Masukkan poin pelanggaran   : ");
-                            int poinPelanggaran = sc08.nextInt();
-
-                            jamKompensasiK = jamAlfaK * 2;
-
-                            System.out.println("Jam Kompensasi anda: " + jamKompensasiK);
-                            if (poinPelanggaran <= 0)
-                            System.out.println("Tidak ada pelanggaran ");
-                            else if (poinPelanggaran <= 30 && poin != 0)
-                            System.out.println("Peringatan Pelanggaran Ringan Tingkat V ");
-                            else if (poinPelanggaran > 30 && poin <= 40)
-                            System.out.println("Peringatan Pelanggaran Sedang Tingkat IV ");
-                            else if (poinPelanggaran > 40 && poin <= 60)
-                            System.out.println("Peringatan Pelanggaran Cukup Berat Tingkat III");
-                            else if (poinPelanggaran > 60 && poin <= 70)
-                            System.out.println("Peringatan Pelanggaran Berat Tingkat II");
-                            else {
-                            System.out.println("Peringatan Pelanggaran Sangat Berat Tingkat I");
-                            }
-                            System.out.print("Exit (true) : ");
-                            exitBoolean = sc08.nextBoolean();
-                            System.out.println();
-                            if (exitBoolean) {
-                                break;
-                            }
+                            tampilkanKompen();
+                            tampilkanPembayaranKompen();
                             break;
 
                         case 4:
